@@ -62,6 +62,24 @@ The raw measurement is in `docs/benchmark.json`. Hardware and dependency version
 
 ## Verification limits
 
-Actual Ollama/vLLM model execution and commercial inference were not performed: no model server, downloaded weights or cloud credentials were supplied. HTTP protocol implementations, configuration independence, structured-output fallback, failure handling and security boundaries are exercised with controlled transports. No claim is made about provider-specific models' semantic accuracy.
+The follow-up [runtime audit](docs/runtime-audit-v0.1.2.md) verified the published
+v0.1.2 wheel and source package on Windows Server 2022 x64 and macOS 14 Apple
+silicon, with Python 3.11 and 3.14: all eight combinations passed 111 tests and
+23 CLI checks. The performance test now uses native memory measurements on each
+platform; the released application package did not require changes.
 
-The release verification report records exact-artifact installation checks and published CI results for this version. CI uses pinned Action commits and Python 3.11-3.14 on Linux. Enterprise identity, remote catalogs, persistent shared caches and external schema-registry enforcement remain outside this MVP; see LIMITATIONS.md and DELIVERY_CHECKLIST.md.
+Live Qwen 2.5 3B inference through Ollama 0.34.2 passed all five reasoning roles
+through both the native Ollama and OpenAI-compatible adapters, using the released
+wheel on Ubuntu 24.04. One invalid compatible-API response was rejected, and the
+bounded retry succeeded. The CPU-only run used a 600-second request timeout;
+default-timeout performance is not established. Commercial/cloud credentials,
+vLLM, other models/servers, and live inference on Windows/macOS were not tested.
+No claim is made about general semantic accuracy.
+
+The release verification report records the original exact-artifact installation
+checks; the runtime audit adds the later platform and live-model evidence without
+replacing the published release assets. CI uses pinned Action commits and Python
+3.11-3.14 on Linux, with a manually runnable release runtime audit for the additional
+platforms. Enterprise identity, remote catalogs, persistent shared caches and
+external schema-registry enforcement remain outside this MVP; see LIMITATIONS.md
+and DELIVERY_CHECKLIST.md.

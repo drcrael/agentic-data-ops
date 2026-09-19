@@ -12,7 +12,9 @@ This is a functioning MVP, not an enterprise certification system. Measurements,
 
 ## Install
 
-Python **3.11 or newer** is required. Linux is the primary tested platform.
+Python **3.11 or newer** is required. Linux CI covers Python 3.11–3.14. The published
+v0.1.2 wheel and source package also pass native Windows Server 2022 and macOS 14
+audits with Python 3.11 and 3.14.
 
 ```bash
 git clone https://github.com/drcrael/agentic-data-ops.git
@@ -23,7 +25,11 @@ python -m pip install -e ".[dev]"
 data-maturity --help
 ```
 
-On Windows, activate with `.venv\Scripts\Activate.ps1`; the shell scripts and resource-based performance test target Linux/macOS. A captured dependency set is in `requirements-dev.lock`; `pyproject.toml` defines supported version ranges.
+On Windows, activate with `.venv\Scripts\Activate.ps1`. The `.sh` convenience scripts
+require a POSIX shell; run the Python and `data-maturity` commands directly in
+PowerShell. The current test harness measures peak memory on Windows, macOS and
+Linux. A captured dependency set is in `requirements-dev.lock`; `pyproject.toml`
+defines supported version ranges.
 
 ## Quick start
 
