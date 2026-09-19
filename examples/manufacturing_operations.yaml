@@ -1,0 +1,35 @@
+# Fictional manufacturing example; no operational or customer data.
+mission_name: Manufacturing Inspection Data Assessment
+mission_description: Assess whether part-inspection records have sufficient identity and measurement definitions for downstream review.
+criticality: high
+use_cases:
+  - id: inspection-data-review
+    description: Review inspection data completeness and definitions before analytical use.
+workflows:
+  - id: inspection-ingestion
+    description: Validate inspection records before downstream use.
+    steps: [ingest, validate identity, confirm measurement definitions, evaluate fitness]
+user_types: [quality analyst, data steward]
+tooling_requirements: [machine-readable schema, documented measurement reference frame]
+data_requirements:
+  - id: part-identity-completeness
+    description: Every inspection record supplies a part identifier.
+    criticality: high
+    dataset: Inspections
+    fields: [part_id]
+    check: completeness
+    threshold: 1.0
+  - id: coordinate-frame
+    description: Measurement reference frame must be authoritative.
+    criticality: high
+    dataset: Inspections
+    fields: [x, y, z]
+    check: semantic
+    property: coordinate_reference_frame
+  - id: coordinate-units
+    description: Measurement units must be authoritative.
+    criticality: high
+    dataset: Inspections
+    fields: [x, y, z]
+    check: semantic
+    property: coordinate_unit

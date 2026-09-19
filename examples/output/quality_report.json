@@ -1,0 +1,742 @@
+{
+  "dataset:aea046cab5baa7321637b0a6": {
+    "metrics": [
+      {
+        "metric_id": "metric:b06271ad23becf0141278bb8",
+        "dimension": "uniqueness",
+        "name": "duplicate_records",
+        "value": 1,
+        "denominator": 6,
+        "field_id": null,
+        "status": "FAIL",
+        "evidence_refs": [
+          "evidence:490393998160a489a29185bf"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:b0c4edb87a0d9bea99728f28",
+        "dimension": "completeness",
+        "name": "missing_identifier",
+        "value": 1,
+        "denominator": 6,
+        "field_id": "field:e17faeafb3f36d27b116d92b",
+        "status": "WARNING",
+        "evidence_refs": [
+          "evidence:4cef4b91ea4a05b2e1afb18a"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:19878319814059870e2cccc7",
+        "dimension": "uniqueness",
+        "name": "duplicate_candidate_identifier",
+        "value": 1,
+        "denominator": 6,
+        "field_id": "field:e17faeafb3f36d27b116d92b",
+        "status": "WARNING",
+        "evidence_refs": [
+          "evidence:4cef4b91ea4a05b2e1afb18a"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:c1631f8e1fe39995a1cb784b",
+        "dimension": "conformity",
+        "name": "whitespace_inconsistency",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:e17faeafb3f36d27b116d92b",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:4cef4b91ea4a05b2e1afb18a"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:3e5365244cd4709e1b5ff2b7",
+        "dimension": "consistency",
+        "name": "casing_inconsistency",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:e17faeafb3f36d27b116d92b",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:4cef4b91ea4a05b2e1afb18a"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:12acd07a8a27d9f167c60235",
+        "dimension": "validity",
+        "name": "invalid_or_ambiguous_dates",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:e17faeafb3f36d27b116d92b",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:4cef4b91ea4a05b2e1afb18a"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:e1b0ec4778ffc02d36938456",
+        "dimension": "consistency",
+        "name": "mixed_physical_types",
+        "value": 1,
+        "denominator": 6,
+        "field_id": "field:e17faeafb3f36d27b116d92b",
+        "status": "FAIL",
+        "evidence_refs": [
+          "evidence:4cef4b91ea4a05b2e1afb18a"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:4ee5cf247996267c68a2ef1c",
+        "dimension": "validity",
+        "name": "nonfinite_values",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:e17faeafb3f36d27b116d92b",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:4cef4b91ea4a05b2e1afb18a"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:b2bca604f0335249200402f8",
+        "dimension": "accuracy_proxies",
+        "name": "potential_anomaly_iqr",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:e17faeafb3f36d27b116d92b",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:4cef4b91ea4a05b2e1afb18a"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:a5dbf69ec75a2d43f767c2cd",
+        "dimension": "accuracy_proxies",
+        "name": "potential_anomaly_mad",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:e17faeafb3f36d27b116d92b",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:4cef4b91ea4a05b2e1afb18a"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:7dc5145607c59ec6a5c389bc",
+        "dimension": "accuracy_proxies",
+        "name": "potential_anomaly_length_iqr",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:e17faeafb3f36d27b116d92b",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:4cef4b91ea4a05b2e1afb18a"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:f16387835783fc57a5bac707",
+        "dimension": "accuracy_proxies",
+        "name": "potential_anomaly_rare_categories",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:e17faeafb3f36d27b116d92b",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:4cef4b91ea4a05b2e1afb18a"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:af9532f88813d26dc565addf",
+        "dimension": "completeness",
+        "name": "missing_values",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:46ebc891a76937de13a63389",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:a6e218fc3935394674fe4c11"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:be05d64693b8b19757ef3b99",
+        "dimension": "conformity",
+        "name": "whitespace_inconsistency",
+        "value": 1,
+        "denominator": 6,
+        "field_id": "field:46ebc891a76937de13a63389",
+        "status": "FAIL",
+        "evidence_refs": [
+          "evidence:a6e218fc3935394674fe4c11"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:50a50342cd27bd6c64140732",
+        "dimension": "consistency",
+        "name": "casing_inconsistency",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:46ebc891a76937de13a63389",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:a6e218fc3935394674fe4c11"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:72c0dab6ddefa98ff3bddc42",
+        "dimension": "validity",
+        "name": "invalid_or_ambiguous_dates",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:46ebc891a76937de13a63389",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:a6e218fc3935394674fe4c11"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:134e3e5f23c2f9869480a219",
+        "dimension": "consistency",
+        "name": "mixed_physical_types",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:46ebc891a76937de13a63389",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:a6e218fc3935394674fe4c11"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:4fc01b6f96b492b2455a7618",
+        "dimension": "validity",
+        "name": "nonfinite_values",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:46ebc891a76937de13a63389",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:a6e218fc3935394674fe4c11"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:2f26d5911bd94ac8e44c3e76",
+        "dimension": "accuracy_proxies",
+        "name": "potential_anomaly_length_iqr",
+        "value": 1,
+        "denominator": 6,
+        "field_id": "field:46ebc891a76937de13a63389",
+        "status": "WARNING",
+        "evidence_refs": [
+          "evidence:a6e218fc3935394674fe4c11"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:ec6f72ce6ef0fc82ec70beb3",
+        "dimension": "accuracy_proxies",
+        "name": "potential_anomaly_rare_categories",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:46ebc891a76937de13a63389",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:a6e218fc3935394674fe4c11"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:2866e1f6b2c02381b0aef154",
+        "dimension": "completeness",
+        "name": "missing_values",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:7a2244782b2cbd92990f85de",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:5251f836c1f901de2055c575"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:dddd09e563b49195387c6d7c",
+        "dimension": "conformity",
+        "name": "whitespace_inconsistency",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:7a2244782b2cbd92990f85de",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:5251f836c1f901de2055c575"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:71f88d9db12e50f68aa12357",
+        "dimension": "consistency",
+        "name": "casing_inconsistency",
+        "value": 4,
+        "denominator": 6,
+        "field_id": "field:7a2244782b2cbd92990f85de",
+        "status": "FAIL",
+        "evidence_refs": [
+          "evidence:5251f836c1f901de2055c575"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:08be4a39da7b5e926b78a783",
+        "dimension": "validity",
+        "name": "invalid_or_ambiguous_dates",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:7a2244782b2cbd92990f85de",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:5251f836c1f901de2055c575"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:562c91316d1d7e60ed54b0ce",
+        "dimension": "consistency",
+        "name": "mixed_physical_types",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:7a2244782b2cbd92990f85de",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:5251f836c1f901de2055c575"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:1c6c4c40af9df6c10253b503",
+        "dimension": "validity",
+        "name": "nonfinite_values",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:7a2244782b2cbd92990f85de",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:5251f836c1f901de2055c575"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:e3d901afbb7248a8debd37d2",
+        "dimension": "accuracy_proxies",
+        "name": "potential_anomaly_length_iqr",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:7a2244782b2cbd92990f85de",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:5251f836c1f901de2055c575"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:1783ed45495ba4b00b31793a",
+        "dimension": "accuracy_proxies",
+        "name": "potential_anomaly_rare_categories",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:7a2244782b2cbd92990f85de",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:5251f836c1f901de2055c575"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:cdbda5117c962a9e570a23c2",
+        "dimension": "completeness",
+        "name": "missing_values",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:a54e90a37bddb94e0667894b",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:efd675a6196ddd2a8d50c782"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:0e6fbec62c4f59cbf5ae1f96",
+        "dimension": "conformity",
+        "name": "whitespace_inconsistency",
+        "value": 1,
+        "denominator": 6,
+        "field_id": "field:a54e90a37bddb94e0667894b",
+        "status": "FAIL",
+        "evidence_refs": [
+          "evidence:efd675a6196ddd2a8d50c782"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:8450d25ffe14584f40953a56",
+        "dimension": "consistency",
+        "name": "casing_inconsistency",
+        "value": 4,
+        "denominator": 6,
+        "field_id": "field:a54e90a37bddb94e0667894b",
+        "status": "FAIL",
+        "evidence_refs": [
+          "evidence:efd675a6196ddd2a8d50c782"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:a2d33afd077f9ea7709f79b6",
+        "dimension": "validity",
+        "name": "invalid_or_ambiguous_dates",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:a54e90a37bddb94e0667894b",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:efd675a6196ddd2a8d50c782"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:84d71436be1599018af50d5c",
+        "dimension": "consistency",
+        "name": "mixed_physical_types",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:a54e90a37bddb94e0667894b",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:efd675a6196ddd2a8d50c782"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:21c5f2add33c74770221cc1c",
+        "dimension": "validity",
+        "name": "nonfinite_values",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:a54e90a37bddb94e0667894b",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:efd675a6196ddd2a8d50c782"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:ec54080a65dae6f0a59c082e",
+        "dimension": "accuracy_proxies",
+        "name": "potential_anomaly_length_iqr",
+        "value": 1,
+        "denominator": 6,
+        "field_id": "field:a54e90a37bddb94e0667894b",
+        "status": "WARNING",
+        "evidence_refs": [
+          "evidence:efd675a6196ddd2a8d50c782"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:95d090c3adeb683ec2440d10",
+        "dimension": "accuracy_proxies",
+        "name": "potential_anomaly_rare_categories",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:a54e90a37bddb94e0667894b",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:efd675a6196ddd2a8d50c782"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:9dea14bac53b5e9933df80f9",
+        "dimension": "completeness",
+        "name": "missing_values",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:34f5c322639ddeec7d27bd0e",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:650afac3e7f09c78af73b89d"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:f2c70ed224e1ac9910ed7ad7",
+        "dimension": "conformity",
+        "name": "whitespace_inconsistency",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:34f5c322639ddeec7d27bd0e",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:650afac3e7f09c78af73b89d"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:159475326830b44c8717adbe",
+        "dimension": "consistency",
+        "name": "casing_inconsistency",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:34f5c322639ddeec7d27bd0e",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:650afac3e7f09c78af73b89d"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:14e82f00f397b11ae510d3bd",
+        "dimension": "validity",
+        "name": "invalid_or_ambiguous_dates",
+        "value": 3,
+        "denominator": 6,
+        "field_id": "field:34f5c322639ddeec7d27bd0e",
+        "status": "WARNING",
+        "evidence_refs": [
+          "evidence:650afac3e7f09c78af73b89d"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:98f350f708c8c02777430569",
+        "dimension": "consistency",
+        "name": "mixed_physical_types",
+        "value": 3,
+        "denominator": 6,
+        "field_id": "field:34f5c322639ddeec7d27bd0e",
+        "status": "FAIL",
+        "evidence_refs": [
+          "evidence:650afac3e7f09c78af73b89d"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:676bbbf872b332aa59422222",
+        "dimension": "validity",
+        "name": "nonfinite_values",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:34f5c322639ddeec7d27bd0e",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:650afac3e7f09c78af73b89d"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope"
+      },
+      {
+        "metric_id": "metric:d30e51f88797d194caa1b15a",
+        "dimension": "accuracy_proxies",
+        "name": "potential_anomaly_length_iqr",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:34f5c322639ddeec7d27bd0e",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:650afac3e7f09c78af73b89d"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:40d4ce9473163eca7b79a231",
+        "dimension": "accuracy_proxies",
+        "name": "potential_anomaly_rare_categories",
+        "value": 0,
+        "denominator": 6,
+        "field_id": "field:34f5c322639ddeec7d27bd0e",
+        "status": "PASS",
+        "evidence_refs": [
+          "evidence:650afac3e7f09c78af73b89d"
+        ],
+        "rule_id": null,
+        "scope": "full",
+        "explanation": "Calculated over measured scope; interpretation remains a candidate"
+      },
+      {
+        "metric_id": "metric:643489e2ae26b08cbb4d3a81",
+        "dimension": "integrity",
+        "name": "integrity_unresolved",
+        "value": null,
+        "denominator": null,
+        "field_id": null,
+        "status": "UNDETERMINED",
+        "evidence_refs": [
+          "evidence:17654c2cf035209d9d012c9c"
+        ],
+        "rule_id": null,
+        "scope": "metadata",
+        "explanation": "No authoritative expectation or sufficient evidence supplied; not a zero score"
+      },
+      {
+        "metric_id": "metric:8084d614fd9afedf8434398d",
+        "dimension": "timeliness",
+        "name": "timeliness_unresolved",
+        "value": null,
+        "denominator": null,
+        "field_id": null,
+        "status": "UNDETERMINED",
+        "evidence_refs": [
+          "evidence:17654c2cf035209d9d012c9c"
+        ],
+        "rule_id": null,
+        "scope": "metadata",
+        "explanation": "No authoritative expectation or sufficient evidence supplied; not a zero score"
+      },
+      {
+        "metric_id": "metric:24cf98190b1a025f5ca670b1",
+        "dimension": "semantic_clarity",
+        "name": "semantic_clarity_unresolved",
+        "value": null,
+        "denominator": null,
+        "field_id": null,
+        "status": "UNDETERMINED",
+        "evidence_refs": [
+          "evidence:17654c2cf035209d9d012c9c"
+        ],
+        "rule_id": null,
+        "scope": "metadata",
+        "explanation": "No authoritative expectation or sufficient evidence supplied; not a zero score"
+      },
+      {
+        "metric_id": "metric:07f712e6a39c3a1a14e3adbb",
+        "dimension": "provenance",
+        "name": "provenance_unresolved",
+        "value": null,
+        "denominator": null,
+        "field_id": null,
+        "status": "UNDETERMINED",
+        "evidence_refs": [
+          "evidence:17654c2cf035209d9d012c9c"
+        ],
+        "rule_id": null,
+        "scope": "metadata",
+        "explanation": "No authoritative expectation or sufficient evidence supplied; not a zero score"
+      },
+      {
+        "metric_id": "metric:f1a23c7f0fb03398bee84ee1",
+        "dimension": "governance",
+        "name": "governance_unresolved",
+        "value": null,
+        "denominator": null,
+        "field_id": null,
+        "status": "UNDETERMINED",
+        "evidence_refs": [
+          "evidence:17654c2cf035209d9d012c9c"
+        ],
+        "rule_id": null,
+        "scope": "metadata",
+        "explanation": "No authoritative expectation or sufficient evidence supplied; not a zero score"
+      }
+    ],
+    "rules": []
+  }
+}

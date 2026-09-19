@@ -1,0 +1,7 @@
+include LICENSE README.md LIMITATIONS.md SECURITY.md DELIVERY_CHECKLIST.md VALIDATION.md Makefile .env.example requirements-dev.lock
+recursive-include scripts *.py *.sh
+recursive-include configs *.yaml
+recursive-include examples *.yaml *.json *.md
+recursive-include docs *.md *.json *.py *.txt *.pdf
+recursive-include tests *.py *.csv *.tsv
+recursive-include .github *.yml

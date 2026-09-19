@@ -1,0 +1,246 @@
+{
+  "dataset:aea046cab5baa7321637b0a6": {
+    "observed": {
+      "fields": [
+        {
+          "field_id": "field:e17faeafb3f36d27b116d92b",
+          "source_name": "customer_id",
+          "canonical_name": "customer_id",
+          "physical_type": "mixed",
+          "semantic_type": null,
+          "description": null,
+          "nullable": null,
+          "unit": null,
+          "format": null,
+          "enum": null,
+          "constraints": {},
+          "key_membership": [],
+          "provenance": [
+            "evidence:4cef4b91ea4a05b2e1afb18a"
+          ],
+          "unresolved_properties": [
+            "definition",
+            "nullable"
+          ],
+          "status": "observed"
+        },
+        {
+          "field_id": "field:46ebc891a76937de13a63389",
+          "source_name": "customer_name",
+          "canonical_name": "customer_name",
+          "physical_type": "string",
+          "semantic_type": null,
+          "description": null,
+          "nullable": null,
+          "unit": null,
+          "format": null,
+          "enum": null,
+          "constraints": {},
+          "key_membership": [],
+          "provenance": [
+            "evidence:a6e218fc3935394674fe4c11"
+          ],
+          "unresolved_properties": [
+            "definition",
+            "nullable"
+          ],
+          "status": "observed"
+        },
+        {
+          "field_id": "field:7a2244782b2cbd92990f85de",
+          "source_name": "state",
+          "canonical_name": "state",
+          "physical_type": "string",
+          "semantic_type": null,
+          "description": null,
+          "nullable": null,
+          "unit": null,
+          "format": null,
+          "enum": null,
+          "constraints": {},
+          "key_membership": [],
+          "provenance": [
+            "evidence:5251f836c1f901de2055c575"
+          ],
+          "unresolved_properties": [
+            "definition",
+            "nullable"
+          ],
+          "status": "observed"
+        },
+        {
+          "field_id": "field:a54e90a37bddb94e0667894b",
+          "source_name": "status",
+          "canonical_name": "status",
+          "physical_type": "string",
+          "semantic_type": null,
+          "description": null,
+          "nullable": null,
+          "unit": null,
+          "format": null,
+          "enum": null,
+          "constraints": {},
+          "key_membership": [],
+          "provenance": [
+            "evidence:efd675a6196ddd2a8d50c782"
+          ],
+          "unresolved_properties": [
+            "definition",
+            "nullable"
+          ],
+          "status": "observed"
+        },
+        {
+          "field_id": "field:34f5c322639ddeec7d27bd0e",
+          "source_name": "created_at",
+          "canonical_name": "created_at",
+          "physical_type": "mixed",
+          "semantic_type": null,
+          "description": null,
+          "nullable": null,
+          "unit": null,
+          "format": null,
+          "enum": null,
+          "constraints": {},
+          "key_membership": [],
+          "provenance": [
+            "evidence:650afac3e7f09c78af73b89d"
+          ],
+          "unresolved_properties": [
+            "definition",
+            "nullable"
+          ],
+          "status": "observed"
+        }
+      ],
+      "status": "observed"
+    },
+    "proposed": {
+      "fields": [
+        {
+          "field_id": "field:e17faeafb3f36d27b116d92b",
+          "source_name": "customer_id",
+          "canonical_name": "customer_id",
+          "physical_type": "mixed",
+          "semantic_type": "identifier",
+          "description": null,
+          "nullable": null,
+          "unit": null,
+          "format": null,
+          "enum": null,
+          "constraints": {
+            "semantic_type_status": "INFERRED"
+          },
+          "key_membership": [],
+          "provenance": [
+            "evidence:4cef4b91ea4a05b2e1afb18a"
+          ],
+          "unresolved_properties": [
+            "definition",
+            "nullable"
+          ],
+          "status": "proposed"
+        },
+        {
+          "field_id": "field:46ebc891a76937de13a63389",
+          "source_name": "customer_name",
+          "canonical_name": "customer_name",
+          "physical_type": "string",
+          "semantic_type": "name",
+          "description": null,
+          "nullable": null,
+          "unit": null,
+          "format": null,
+          "enum": null,
+          "constraints": {
+            "semantic_type_status": "INFERRED"
+          },
+          "key_membership": [],
+          "provenance": [
+            "evidence:a6e218fc3935394674fe4c11"
+          ],
+          "unresolved_properties": [
+            "definition",
+            "nullable"
+          ],
+          "status": "proposed"
+        },
+        {
+          "field_id": "field:7a2244782b2cbd92990f85de",
+          "source_name": "state",
+          "canonical_name": "state",
+          "physical_type": "string",
+          "semantic_type": "category",
+          "description": null,
+          "nullable": null,
+          "unit": null,
+          "format": null,
+          "enum": null,
+          "constraints": {
+            "semantic_type_status": "INFERRED"
+          },
+          "key_membership": [],
+          "provenance": [
+            "evidence:5251f836c1f901de2055c575"
+          ],
+          "unresolved_properties": [
+            "definition",
+            "nullable"
+          ],
+          "status": "proposed"
+        },
+        {
+          "field_id": "field:a54e90a37bddb94e0667894b",
+          "source_name": "status",
+          "canonical_name": "status",
+          "physical_type": "string",
+          "semantic_type": "status",
+          "description": null,
+          "nullable": null,
+          "unit": null,
+          "format": null,
+          "enum": null,
+          "constraints": {
+            "semantic_type_status": "INFERRED"
+          },
+          "key_membership": [],
+          "provenance": [
+            "evidence:efd675a6196ddd2a8d50c782"
+          ],
+          "unresolved_properties": [
+            "code_definitions",
+            "definition",
+            "nullable"
+          ],
+          "status": "proposed"
+        },
+        {
+          "field_id": "field:34f5c322639ddeec7d27bd0e",
+          "source_name": "created_at",
+          "canonical_name": "created_at",
+          "physical_type": "mixed",
+          "semantic_type": "timestamp",
+          "description": null,
+          "nullable": null,
+          "unit": null,
+          "format": null,
+          "enum": null,
+          "constraints": {
+            "semantic_type_status": "INFERRED"
+          },
+          "key_membership": [],
+          "provenance": [
+            "evidence:650afac3e7f09c78af73b89d"
+          ],
+          "unresolved_properties": [
+            "definition",
+            "nullable",
+            "temporal_semantics"
+          ],
+          "status": "proposed"
+        }
+      ],
+      "status": "proposed"
+    }
+  }
+}

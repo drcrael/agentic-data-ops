@@ -1,0 +1,9 @@
+llm_enabled: true
+security:
+  mode: local_only
+models:
+  semantic_inference: {provider: mock}
+  quality_reasoning: {provider: mock}
+  governance_reasoning: {provider: mock}
+  maturation_reasoning: {provider: mock}
+  report_generation: {provider: mock}

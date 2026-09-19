@@ -1,0 +1,1976 @@
+[
+  {
+    "title": "Understand the capability",
+    "subtitle": "What the MVP does, who uses it, and what its results mean",
+    "blocks": [
+      {
+        "type": "p",
+        "args": [
+          "Agentic Data Ops contains <b>Data Maturity Agent 0.1.1</b>, a Python command-line application. It inspects spreadsheets and delimited files, measures data quality, identifies missing business knowledge, and produces an evidence-backed assessment plus a proposed data-product contract."
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Use it as an analyst to understand a new asset, as a steward to identify ownership and definition gaps, or as an engineer to compare assessments after changes. A terminal runs the application; JSON, YAML and Markdown files are the deliverables. There is no web application to start."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "The assessment workflow"
+        ]
+      },
+      {
+        "type": "table",
+        "args": [
+          [
+            "Stage",
+            "What happens"
+          ],
+          [
+            [
+              "Inspect and measure",
+              "Discover datasets and physical fields; calculate profiles, explicit quality rules, key candidates and relationship candidates."
+            ],
+            [
+              "Interpret and assess",
+              "Keep semantic and governance questions separate from measurements. Evaluate maturity, AI readiness and explicit mission requirements."
+            ],
+            [
+              "Resolve and improve",
+              "Record attributed SME answers; propose schemas, contracts and remediation; reassess and compare against history or a named baseline."
+            ]
+          ],
+          [
+            137,
+            379
+          ]
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Three knowledge states"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "<b>OBSERVED</b> means a measurement or an attributed supplied fact. An authoritative human answer is observed as human-provided knowledge, not independently proven truth. <b>INFERRED</b> means a supported hypothesis with confidence and reasoning. <b>UNRESOLVED</b> means the available evidence cannot establish the answer."
+        ]
+      },
+      {
+        "type": "note",
+        "args": [
+          "Keep the distinctions",
+          "A valid assessment, a clean file, an established baseline and fitness for a particular mission are different outcomes. The application never turns a model opinion into an authoritative definition or an automatic data repair."
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Start without an LLM. Model-backed reasoning is optional and adds explanatory notes; deterministic measurement and scoring remain available without a server, GPU or cloud account."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Install on Linux or macOS",
+    "subtitle": "Recommended first installation; Linux is the verified platform",
+    "blocks": [
+      {
+        "type": "p",
+        "args": [
+          "You need Git, a terminal, a writable project folder, and Python <b>3.11-3.14</b> with pip and venv. The package declares Python 3.11 or newer; this manual uses the tested 3.11-3.14 range. Dependency installation needs package-index access. Assessment without an LLM does not need the internet."
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "git --version\npython3 --version\ngit clone https://github.com/drcrael/agentic-data-ops.git\ncd agentic-data-ops\npython3 -m venv .venv\nsource .venv/bin/activate\npython -m pip install -e \".[dev]\"\ndata-maturity --help"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "The virtual environment keeps dependencies separate from other applications. After activation, use <b>python</b> and <b>python -m pip</b> so installation and execution use the same interpreter. The help screen should list inspect, profile, analyze and resolve."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Choose the installation type"
+        ]
+      },
+      {
+        "type": "table",
+        "args": [
+          [
+            "Command from the repository root",
+            "Use"
+          ],
+          [
+            [
+              "python -m pip install -e \".[dev]\"",
+              "Recommended for following this manual: runtime, test and build tools; source edits take effect immediately."
+            ],
+            [
+              "python -m pip install .",
+              "Regular runtime installation. Retain the clone for configuration examples, fixture generation and documentation."
+            ]
+          ],
+          [
+            278,
+            238
+          ]
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Return to the application later"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "cd /path/to/agentic-data-ops\nsource .venv/bin/activate\ndata-maturity --help"
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "Replace /path/to/agentic-data-ops with your actual folder. Use deactivate to leave the environment. On some Linux distributions, a missing venv/ensurepip component must be installed using your distribution package manager. macOS commands are provided for convenience; end-to-end validation was performed on Linux."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Install on Windows",
+    "subtitle": "PowerShell commands and a path that does not require activation",
+    "blocks": [
+      {
+        "type": "p",
+        "args": [
+          "Install Git and a Python version in the tested 3.11-3.14 range. Open PowerShell in a writable folder. The example selects Python 3.11 with the Windows Python launcher; choose another installed version in the tested range if appropriate."
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "git --version\npy -3.11 --version\ngit clone https://github.com/drcrael/agentic-data-ops.git\ncd agentic-data-ops\npy -3.11 -m venv .venv\n.\\.venv\\Scripts\\python.exe -m pip install -e \".[dev]\"\n.\\.venv\\Scripts\\data-maturity.exe --help"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "These commands call the environment directly, so you do not need to change PowerShell execution policy. If your environment permits activation, run the following and use the shorter commands shown elsewhere in this manual."
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          ".\\.venv\\Scripts\\Activate.ps1\ndata-maturity --help"
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Run the demo without a shell script"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          ".\\.venv\\Scripts\\python.exe scripts/generate_test_workbooks.py\n.\\.venv\\Scripts\\data-maturity.exe analyze `\n  tests/fixtures/dirty_customers.xlsx --no-llm `\n  -o output/windows-demo-01"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "A PowerShell backtick at the end of a line continues the command; do not place spaces after it. The Linux/macOS examples use backslashes for continuation instead. Alternatively put the whole command on one line."
+        ]
+      },
+      {
+        "type": "note",
+        "args": [
+          "Platform scope",
+          "Windows has not been validated end to end. The sh scripts and resource-based performance test target Unix-like environments. Use the direct Python/CLI commands for a first smoke test; investigate any platform-specific failure before relying on Windows for a production process."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Your first successful assessment",
+    "subtitle": "A reproducible walkthrough with the included synthetic fixtures",
+    "blocks": [
+      {
+        "type": "p",
+        "args": [
+          "Run these commands from the repository root with the environment active. The fixture generator creates synthetic Excel workbooks that are not stored as binary files in the repository."
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "python scripts/generate_test_workbooks.py\ndata-maturity inspect tests/fixtures/semi_structured.xlsx\ndata-maturity profile tests/fixtures/dirty_customers.xlsx\ndata-maturity analyze tests/fixtures/dirty_customers.xlsx \\\n  --no-llm -o output/dirty-01"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "The analyze command prints a lifecycle outcome, dataset count and output location. <b>WAITING_FOR_HUMAN</b> is expected when definitions or governance decisions remain unknown. It means the reports are available and you have specific questions to resolve."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Open these files first"
+        ]
+      },
+      {
+        "type": "table",
+        "args": [
+          [
+            "File in output/dirty-01",
+            "What to do"
+          ],
+          [
+            [
+              "maturity_report.md",
+              "Read the overview, measured scope, findings and prioritized remediation."
+            ],
+            [
+              "sme_questions.md",
+              "Identify the questions requiring an accountable owner or domain expert."
+            ],
+            [
+              "quality_report.json",
+              "Check measured values, explicit rule outcomes and evidence references."
+            ],
+            [
+              "assessment_history.json",
+              "Read the latest iteration, decision, reasons and next actions."
+            ]
+          ],
+          [
+            213,
+            303
+          ]
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "One-command demo on Linux/macOS"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "sh scripts/demo.sh"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "The script generates the fixtures and assesses dirty_customers.xlsx without an LLM into a timestamped output folder. It is an assessment demonstration, not an automated cleanup."
+        ]
+      },
+      {
+        "type": "note",
+        "args": [
+          "Repeat safely",
+          "Use a new output name such as output/dirty-02 on subsequent runs. Assessment reports refuse a nonempty destination; profile output requires a destination that does not already exist. Keep prior reports for comparisons."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Prepare your own data",
+    "subtitle": "Supported formats, workbook layout and source identity",
+    "blocks": [
+      {
+        "type": "table",
+        "args": [
+          [
+            "Input",
+            "Practical preparation"
+          ],
+          [
+            [
+              ".xlsx / .xlsm",
+              "Prefer explicit Excel tables or rectangular regions with one header row. Leave blank rows/columns between independent tables. Hidden content may be inspected."
+            ],
+            [
+              ".csv / .tsv",
+              "Use UTF-8 text, a first-record header and the fixed comma/tab delimiter. Give columns meaningful, distinct names."
+            ],
+            [
+              "Other formats",
+              "Legacy .xls, encrypted workbooks, databases, Parquet, JSON and arbitrary delimiters are not supplied ingestion paths."
+            ]
+          ],
+          [
+            114,
+            402
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Save the source before running an assessment. Retain an unchanged copy if you intend to answer questions later: resolve checks the original file hash. The application reads the source and does not edit it."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Avoid ambiguous layouts"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Multirow headers, nested visual reports, adjacent tables without separators and complex merged layouts may not be discovered correctly. Start with inspect and review each detected region and field list. If the layout is wrong, prepare a tabular export and assess that export as a separately documented artifact. There is no CLI region-selection switch."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Treat formulas and identifiers deliberately"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Formulas and macros are not executed. Formula results are unavailable to profiling and contribute to missing-value counts with an explicit disclosure. To assess calculated values, create a separately identified, values-only export through your controlled source process. Keep the original and document the derivation."
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Preserve leading zeros in identifiers. Excel strings and numbers are physically different; CSV uses lexical interpretation. Do not silently normalize IDs, dates, units or codes just to remove findings. Agree on the intended meaning and normalization first."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Organize source versions"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Use a stable filename for successive versions of the same asset, for example incoming/customers.xlsx. Archive old versions in separate folders. Dataset and field IDs depend on structural identity; renames can look like removal and addition rather than a simple value change."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Inspect and profile",
+    "subtitle": "Use the smallest command that answers your current question",
+    "blocks": [
+      {
+        "type": "h",
+        "args": [
+          "Inspect: confirm the structure"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "data-maturity inspect \"incoming/customer export.xlsx\" \\\n  --config configs/no_llm.yaml > inspection.json"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "inspect writes JSON to standard output. It reports source metadata and detected datasets, including structure and fields. Check dataset_id, worksheet/table, region boundaries, original and canonical names, confidence and structural disclosures. There is no --output option for inspect; the shell redirection above saves its output."
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "The command performs no LLM inference. Configuration still controls ingestion bounds. Source names that normalize to the same canonical name receive deterministic disambiguation rather than being silently merged."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Profile: inspect measurements and evidence"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "data-maturity profile incoming/customers.xlsx \\\n  --config configs/no_llm.yaml -o output/profile-01"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "profile creates <b>profile.json</b>, containing dataset profiles and evidence. Without -o it prints the same payload to standard output. It forces inference off. It does not produce the full mission, governance, question, contract or longitudinal assessment bundle; use analyze for those workflows."
+        ]
+      },
+      {
+        "type": "note",
+        "args": [
+          "Output-directory difference",
+          "The profile command requires a nonexistent directory. analyze and resolve accept a new or empty directory and stage the full bundle atomically. The dedicated profile file and redirected inspection file use ordinary filesystem permissions; protect them with your working-directory access controls."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "When inspection is not what you expected"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Confirm the input extension and format, review hidden sheets and blank boundaries, and inspect original field names before writing rule or mission mappings. Use the stable dataset/field IDs from the result when human-readable names are ambiguous. Source preparation is preferable to interpreting the wrong region as your intended dataset."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Analyze and interpret the outcome",
+    "subtitle": "A full assessment can succeed while questions or defects remain",
+    "blocks": [
+      {
+        "type": "code",
+        "args": [
+          "data-maturity analyze incoming/customers.xlsx --no-llm \\\n  --config configs/default.yaml -o output/customers-01"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "analyze runs the complete assessment and writes the report bundle. --no-llm overrides llm_enabled in the selected configuration. If -o is omitted, runtime.output_directory is used; its default is output. Prefer explicit, unique output folders."
+        ]
+      },
+      {
+        "type": "table",
+        "args": [
+          [
+            "Final outcome",
+            "Meaning and next action"
+          ],
+          [
+            [
+              "WAITING_FOR_HUMAN",
+              "Open blocking authoritative questions remain. Send the questions and relevant evidence to the appropriate SME; record answers with resolve."
+            ],
+            [
+              "DEGRADED",
+              "No blocking human questions, but an optional reasoning component failed. Review component_status and model configuration; deterministic results remain available."
+            ],
+            [
+              "REMEDIATION_REQUIRED",
+              "Authority gates pass, but material findings remain. Correct data or rules through an approved process, then reassess."
+            ],
+            [
+              "BASELINE_ESTABLISHED",
+              "Authority gates pass without material findings. This lifecycle state does not itself prove mission fitness or create a named baseline unless one was requested."
+            ],
+            [
+              "Fatal failure / exit 2",
+              "Invalid input, configuration, policy or output-integrity error. Correct the issue and rerun; do not treat a failed command as a usable assessment."
+            ]
+          ],
+          [
+            170,
+            346
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "The human gate takes precedence over optional reasoning failure. A WAITING_FOR_HUMAN run can also contain degraded components; inspect component_status in assessment.json rather than relying only on the terminal summary."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Use exit codes correctly"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Exit code <b>0</b> means a valid assessment was produced. It is not a data acceptance signal. If integrating into another process, evaluate the lifecycle decision, relevant quality rules, mission results and sample scope explicitly. Shell argument errors also typically return 2."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Navigate the output bundle",
+    "subtitle": "Human reports, machine-readable records and audit artifacts",
+    "blocks": [
+      {
+        "type": "table",
+        "args": [
+          [
+            "Artifact",
+            "Contents and use"
+          ],
+          [
+            [
+              "assessment.json",
+              "Canonical full assessment: datasets, profiles, assertions, findings, governance, maturity, readiness and component status."
+            ],
+            [
+              "maturity_report.md",
+              "Human-readable overview, limitations, findings, questions and remediation roadmap."
+            ],
+            [
+              "sme_questions.md",
+              "Targeted questions with identifiers for structured responses."
+            ],
+            [
+              "schema.json",
+              "Observed physical schema and proposed target schema per dataset."
+            ],
+            [
+              "quality_report.json",
+              "Quality metrics and explicit rules, status, denominator, scope and evidence references."
+            ],
+            [
+              "evidence.json",
+              "Measurements and provenance objects. It is not a full source-row export."
+            ],
+            [
+              "evidence_graph.json",
+              "Nodes/edges and explicit relationships used for traceability; no graph database is required."
+            ],
+            [
+              "data_contract.yaml",
+              "Proposed contracts, candidate keys, relationships and unresolved expectations."
+            ],
+            [
+              "mission_fitness.json",
+              "Requirement-level results when mission evaluation produces results."
+            ],
+            [
+              "run_manifest.json",
+              "Hashes and reproducibility metadata for the bundle."
+            ],
+            [
+              "assessment_history.json",
+              "Iterations, decisions, resolutions, snapshots and named baselines."
+            ],
+            [
+              "assessment_delta.json",
+              "Changes when a prior assessment or named baseline is compared."
+            ]
+          ],
+          [
+            165,
+            351
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Keep the whole bundle together. Loading assessment.json can automatically pick up its adjacent assessment_history.json; a mismatch is rejected. For longitudinal work, pass the history file explicitly so baselines and prior resolutions remain available."
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "Markdown files open in a text editor or Markdown viewer; JSON/YAML files are also plain text. Do not edit generated history or evidence to change a result. Edit trusted configuration, submit resolutions, or correct the source and produce a new assessment."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Read measurements without overclaiming",
+    "subtitle": "Scope, denominators and candidate findings",
+    "blocks": [
+      {
+        "type": "h",
+        "args": [
+          "Check scope before interpreting a percentage"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "A profile describes either full measured data or a sample. The default retains up to 10,000 rows while scanning up to 1,000,000 rows. A scan-limited run describes a sample of the scanned prefix, not an unbiased sample of the entire file. Sampled uniqueness and containment do not establish population-wide keys or orphans."
+        ]
+      },
+      {
+        "type": "table",
+        "args": [
+          [
+            "Measurement",
+            "Interpretation"
+          ],
+          [
+            [
+              "Null rate",
+              "Uses all measured rows as its denominator. Formula results that are unavailable are included as missing; consult the formula finding."
+            ],
+            [
+              "Distinctness / uniqueness",
+              "Uses non-null values. Duplicate frequency counts occurrences beyond the first. Three copies of a value contribute two duplicates."
+            ],
+            [
+              "Physical types",
+              "Values are type-sensitive: integer 1, string \"1\" and boolean true differ. All-null columns have no observed type."
+            ],
+            [
+              "Dates and anomalies",
+              "Ambiguous slash dates are not guessed. Statistical outliers and unusual text are candidates for review, not proof of invalid data."
+            ],
+            [
+              "Key and join candidates",
+              "Complete/unique fields and bounded two-field key combinations are candidates. Relationships use conservative same-name scalar identifiers and compatible physical types."
+            ]
+          ],
+          [
+            158,
+            358
+          ]
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Separate evidence from interpretation"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "A measured missing ID can support an inferred expectation that the field should be required. Only an explicit not_null rule makes that requiredness a user-defined rule. Likewise, duplicate candidate identifiers do not prove a violation of an approved business key."
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "For a finding, inspect its state, severity, affected count/percentage and evidence_refs. For explicit rules, review PASS, FAIL or UNDETERMINED and the explanation. WARNING generally means the measurement exists but the interpretation remains a candidate."
+        ]
+      },
+      {
+        "type": "note",
+        "args": [
+          "No automatic repairs",
+          "Do not delete anomalies, fill blanks, deduplicate records or change codes solely to improve the report. Confirm business meaning and source authority first; keep transformation lineage and rerun on the resulting asset."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Create a configuration",
+    "subtitle": "One YAML document defines the settings for each invocation",
+    "blocks": [
+      {
+        "type": "p",
+        "args": [
+          "Start from configs/default.yaml and save your own configuration outside the tracked example files. --config loads one YAML document. Omitted fields use built-in defaults; it does not merge several configuration files or automatically include another YAML file. Unknown fields are rejected by the validated model."
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "llm_enabled: false\nruntime:\n  output_directory: output\n  random_seed: 42\n  verbosity: INFO\nprofiling:\n  max_rows: 1000000\n  sample_rows: 10000\n  include_value_summaries: false\nsecurity:\n  mode: local_only\n  allow_metadata_to_remote_models: false\n  allow_raw_data_to_remote_models: false\nllm_context:\n  include_samples: false"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "data-maturity analyze incoming/customers.xlsx --no-llm \\\n  --config my-config.yaml -o output/configured-01"
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Reproducible changes"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Version your trusted configuration alongside your operating procedure. Keep the source hash, seed and bounds with the output bundle. To compare runs after a rule change, preserve the rule_id, increment quality_rules_version and supply the complete updated configuration with --prior."
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "analyze does <b>not</b> automatically restore the prior configuration: pass --config again when you used custom settings. resolve, when --config is omitted, restores the configuration embedded in the prior assessment. A prior mission context is reused unless a new --mission file is supplied."
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "Configuration files are limited to 2 MB and use YAML safe loading. Credentials belong in the named environment variable, never in YAML. A .env file is not automatically loaded. Relative input, mission, configuration and output paths resolve from your current working directory."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Control size and sampling",
+    "subtitle": "Resource settings and their default values",
+    "blocks": [
+      {
+        "type": "table",
+        "args": [
+          [
+            "profiling setting",
+            "Default",
+            "Operational meaning"
+          ],
+          [
+            [
+              "sample_rows",
+              "10,000",
+              "Maximum retained rows per dataset for measurement."
+            ],
+            [
+              "max_rows",
+              "1,000,000",
+              "Maximum scanned rows; exceeding it is disclosed as truncation."
+            ],
+            [
+              "max_columns",
+              "256",
+              "Maximum admitted columns; validated upper bound is 16,384."
+            ],
+            [
+              "max_file_bytes",
+              "100,000,000",
+              "Maximum input-file bytes."
+            ],
+            [
+              "max_excel_cells",
+              "2,000,000",
+              "Bound on workbook cells considered by ingestion."
+            ],
+            [
+              "max_uncompressed_bytes",
+              "250,000,000",
+              "Bound on expanded workbook content."
+            ],
+            [
+              "max_field_chars",
+              "100,000",
+              "Maximum field/value character size."
+            ],
+            [
+              "max_composite_candidates",
+              "100",
+              "Maximum candidate two-field key combinations; zero disables them."
+            ],
+            [
+              "max_relationship_pairs",
+              "5,000",
+              "Bound on relationship candidate pair evaluation."
+            ],
+            [
+              "top_values",
+              "20",
+              "Bound for local common-value summaries when enabled."
+            ],
+            [
+              "include_value_summaries",
+              "false",
+              "Opt in to common values/enums in local reports."
+            ]
+          ],
+          [
+            205,
+            78,
+            233
+          ]
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "When you need full coverage"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Use inspect to understand the source and raise both sample_rows and max_rows enough to cover the intended dataset, while retaining appropriate byte/cell bounds. Confirm the actual full/sample scope in the result. Increasing retained rows raises memory usage; Excel also loads a bounded in-memory workbook."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Other useful defaults"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "runtime.random_seed is 42; verbosity is INFO (also DEBUG or WARNING). llm_max_attempts is 2 (1-5 allowed) and llm_cache is false. The cache, if enabled, exists only within one gateway instance. assessment_control.max_iterations is 10; this MVP still performs only one automatic pass per explicit event."
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "The measured 100,000-row CSV benchmark retained a 10,000-row sample. It is not a claim that every Excel workbook or a fully retained 100,000-row assessment uses the same memory or time."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Define explicit quality rules",
+    "subtitle": "Turn approved expectations into deterministic checks",
+    "blocks": [
+      {
+        "type": "p",
+        "args": [
+          "Rules live inside the complete configuration under quality_rules. Each rule needs rule_id, field, dimension and operator. Use stable, unique IDs. dataset is optional; omit it only when the same field rule should apply across every selected dataset. Missing fields produce an UNDETERMINED rule result; a nonmatching dataset selector can skip the rule entirely."
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "llm_enabled: false\nquality_rules_version: \"1\"\nquality_rules:\n  - rule_id: customer_id_required\n    dataset: Customers\n    field: customer_id\n    dimension: completeness\n    operator: not_null\n    severity: critical\n    origin: USER_DEFINED\n  - rule_id: customer_id_unique\n    dataset: Customers\n    field: customer_id\n    dimension: uniqueness\n    operator: unique\n    severity: high\n    origin: USER_DEFINED"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "data-maturity analyze tests/fixtures/dirty_customers.xlsx \\\n  --no-llm --config customer-rules.yaml -o output/rules-01"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Dataset selectors match a dataset ID, worksheet name or table name. Field selectors match a field ID, source name or canonical name. Use IDs when names collide, and confirm that quality_report.json includes the rule IDs you expected."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Requiredness is a separate rule"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "unique, range, enum, pattern, type and freshness evaluate non-null values. Pair them with not_null when the field is mandatory. A unique result does not imply completeness. Severity can be critical, high, medium, low or info; origin defaults to USER_DEFINED."
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "The repository includes examples/customer_rules.yaml and configs/quality_rules.yaml. The latter applies an explicit temperature range to the synthetic anomaly fixture. Do not copy a temperature bound into real data until its units and meaning are authoritative."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Quality-rule recipes",
+    "subtitle": "Operator reference and date-aware freshness",
+    "blocks": [
+      {
+        "type": "table",
+        "args": [
+          [
+            "Operator",
+            "parameters",
+            "Meaning / caveat"
+          ],
+          [
+            [
+              "not_null",
+              "None",
+              "Counts missing values."
+            ],
+            [
+              "unique",
+              "None",
+              "Counts duplicate non-null occurrences beyond the first."
+            ],
+            [
+              "range",
+              "min and/or max",
+              "Inclusive numeric limits; nonnumeric non-null values fail."
+            ],
+            [
+              "enum",
+              "values: [CA, NY]",
+              "Exact, type-sensitive membership in the approved list."
+            ],
+            [
+              "pattern",
+              "pattern: '[A-Z]{2}'",
+              "Full-string regex match. Match and total evaluation time are bounded."
+            ],
+            [
+              "type",
+              "type: string",
+              "Expected physical type, not an automatic conversion."
+            ],
+            [
+              "freshness",
+              "max_age_days: 7",
+              "Age against assessment time; timezone-aware timestamps required."
+            ]
+          ],
+          [
+            78,
+            161,
+            277
+          ]
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "quality_rules:\n  - rule_id: observed_recently\n    dataset: Events\n    field: observed_at\n    dimension: timeliness\n    operator: freshness\n    parameters: {max_age_days: 7}\n    severity: high\n    origin: MISSION_DEFINED\n  - rule_id: observation_time_required\n    dataset: Events\n    field: observed_at\n    dimension: completeness\n    operator: not_null"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "For example, 2026-09-19T12:00:00Z carries a timezone. A date-only value or a naive timestamp does not: the freshness result stays UNDETERMINED. Document whether the timestamp represents event, publication or processing time. The age rule alone does not reject future timestamps."
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Regex patterns must be nonempty, at most 256 characters, and avoid prohibited nested repetition. A match timeout or total evaluation timeout produces UNDETERMINED rather than a pass. Write simple patterns in trusted configuration, never from untrusted workbook instructions."
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "Use reported physical types for type rules; commonly string, integer, float, boolean, date or datetime. CSV interpretation is lexical while Excel preserves its physical value types. Increment quality_rules_version when an approved rule definition changes."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Evaluate mission fitness",
+    "subtitle": "Assess explicit requirements for an intended use",
+    "blocks": [
+      {
+        "type": "p",
+        "args": [
+          "A mission file explains the intended use and maps requirements to datasets and fields. Generic data quality is not a substitute for this context. The fictional example in examples/manufacturing_operations.yaml checks part identity, measurement units and reference frame. It does not certify manufactured parts. A small custom mission document can look like this:"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "mission_name: Customer operations\nmission_description: Prepare an accountable customer directory.\ndata_requirements:\n  - id: all-customers-have-id\n    description: Every customer record has an identifier.\n    dataset: Customers\n    fields: [customer_id]\n    check: completeness\n    threshold: 1.0\n    criticality: critical\n  - id: customer-owner-known\n    description: An accountable owner is documented.\n    dataset: Customers\n    check: governance\n    property: owner\n    criticality: high"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "data-maturity analyze tests/fixtures/dirty_customers.xlsx \\\n  --no-llm --mission customer-mission.yaml -o output/mission-01"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Supported checks are completeness, uniqueness, semantic, governance, rule, freshness and unspecified. Completeness/uniqueness thresholds are fractions from 0 to 1. Semantic checks use an assertion property such as coordinate_unit; governance checks use a property such as owner. rule and freshness use rule_id to reference an explicit quality rule in --config."
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Results are <b>FIT</b>, <b>PARTIALLY_FIT</b>, <b>NOT_FIT</b> or <b>UNDETERMINED</b> per requirement. Unknown authority or sampled-only quantitative evidence prevents a positive full-data claim. A missing mapped dataset is NOT_FIT. Narrative-only requirements cannot be executed and remain unresolved."
+        ]
+      },
+      {
+        "type": "note",
+        "args": [
+          "Check the mapping and evidence",
+          "Review the field_ids and dataset_ids in mission_fitness.json. For critical semantic acceptance, verify authority for every intended field; do not infer full field coverage from a single related assertion or the headline result. max_age_days in a mission document alone does not create a freshness rule."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Supply governance metadata",
+    "subtitle": "Document accountability without asking a model to invent it",
+    "blocks": [
+      {
+        "type": "p",
+        "args": [
+          "Governance can be supplied in trusted configuration or through attributed human resolutions. Only record statements you are authorized to supply; the tool records the supplied fact but does not verify the person against an identity service."
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "governance_metadata:\n  Customers:\n    owner: Customer Operations\n    steward: Customer Data Steward\n    authoritative_source: Approved customer master export\n    source_system: Example CRM\n    security_classification: Internal\n    retention: Per approved retention schedule R-01\n    provenance: Controlled export procedure EX-01\n    lineage: CRM customer entity to Customers worksheet\n    version: \"1\""
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "Illustrative values only. Replace these with your actual approved owners, classifications, references and retention requirements. Do not label a real dataset Internal simply because that value appears in the example."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Supported governance properties"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "owner, steward, authoritative_source, source_system, provenance, lineage, sensitivity, security_classification, access_constraints, retention, update_cadence, version, licensing and quality_accountability."
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "The lookup order is wildcard \"*\", worksheet name, table name, then dataset ID; later entries override earlier entries. Quote \"*\" in YAML if you use it. Use wildcard values only for facts that truly apply to every dataset."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Apply and verify"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "data-maturity analyze incoming/customers.xlsx --no-llm \\\n  --config governed-config.yaml -o output/governed-01"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Review each governance item in assessment.json. Missing owner, authoritative_source and security_classification can create blocking questions. Other missing properties still matter even when they do not block the lifecycle decision."
+        ]
+      },
+      {
+        "type": "note",
+        "args": [
+          "Metadata is not enforcement",
+          "Writing an access constraint, classification or retention statement does not change filesystem permissions, delete expired records, configure a catalog or enforce an enterprise policy. Those controls must exist in your operating environment."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Answer SME questions",
+    "subtitle": "Record human knowledge with identity, authority and provenance",
+    "blocks": [
+      {
+        "type": "p",
+        "args": [
+          "<b>1.</b> Open sme_questions.md from the latest run. Choose the current question ID and read its related fields/evidence. Obtain the answer from the appropriate domain expert or accountable owner. Do not reuse an example identifier."
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "<b>2.</b> Save an answers.yaml file. The short format below answers one question; add more entries under answers for a batch. For this walkthrough, choose the governance owner question in output/mission-01 and replace its ID below. The names are illustrative; use real approved authority for your own data."
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "answers:\n  \"question:REPLACE_WITH_ACTUAL_ID\":\n    answer: Customer Operations\n    answered_by: Customer Data Steward\n    authority: Accountable customer-data owner\n    authoritative: true\n    source_reference: Approved ownership register"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "<b>3.</b> Resolve against the unchanged source. Without --config, resolve restores the prior embedded configuration, including its model policy."
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "data-maturity resolve output/mission-01/assessment.json \\\n  answers.yaml --source tests/fixtures/dirty_customers.xlsx \\\n  -o output/resolved-01"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "The command uses the synthetic customer mission from Chapter 14. For a real assessment, substitute its original source file. A changed hash is rejected and requires analyze --prior first."
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "<b>4.</b> Review the new assertions, question status, history and delta. An authoritative response creates an OBSERVED assertion with provenance and supersession links. A non-authoritative answer remains INFERRED and leaves the authority gate open. Other unanswered questions can still yield WAITING_FOR_HUMAN."
+        ]
+      },
+      {
+        "type": "note",
+        "args": [
+          "Keep the history",
+          "Use a new output directory and keep the old bundle. Resolutions create new assertion versions rather than overwriting historical knowledge. A human answer cannot erase a deterministic quality violation; correct the data, update an explicit approved rule, or use an appropriate lifecycle decision."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Record decisions and accepted risk",
+    "subtitle": "The full resolution format supports more than simple answers",
+    "blocks": [
+      {
+        "type": "code",
+        "args": [
+          "resolutions:\n  - resolution_id: resolution:decision-001\n    question_id: question:REPLACE_WITH_ACTUAL_ID\n    resolution_type: ACCEPTED_RISK\n    value: Defer this question for a restricted pilot.\n    provided_by: Accountable owner\n    authority: Data-product owner\n    authoritative: true\n    source_reference: Approved decision record DR-001\n    rationale: Restricted use with a documented compensating review.\n    scope: Named pilot and dataset version only.\n    review_at: \"2027-01-01T00:00:00Z\""
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "This is a format example, not a suggested decision. Replace the identity, target, rationale, scope and review date with an actual approved record. review_at must be in the future at execution time and include a timezone. Risk acceptance does not supply a missing unit or repair incorrect data."
+        ]
+      },
+      {
+        "type": "table",
+        "args": [
+          [
+            "Resolution type",
+            "Use"
+          ],
+          [
+            [
+              "SME_ANSWER / DATA_OWNER_DECISION / GOVERNANCE_DECISION",
+              "Create attributed knowledge against an existing question or assertion."
+            ],
+            [
+              "AUTHORITATIVE_REFERENCE / USER_OVERRIDE",
+              "Supply a referenced answer; authority rules still apply. Override cannot rewrite deterministic facts."
+            ],
+            [
+              "ACCEPTED_RISK",
+              "Requires authority, rationale, scope and future review date. Expiry reopens applicable questions/findings on reassessment."
+            ],
+            [
+              "ACKNOWLEDGED / REMEDIATION_PLANNED",
+              "Record a finding lifecycle decision. Acknowledgement alone does not close an authoritative question."
+            ],
+            [
+              "RULE_UPDATE",
+              "Not accepted as an executable answer. Update trusted configuration and run analyze --prior instead."
+            ]
+          ],
+          [
+            225,
+            291
+          ]
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "Full resolutions require resolution_id, value, provided_by and at least one current question_id, assertion_id or finding_id. Use a fresh resolution ID for a new decision. Do not target a superseded assertion or edit stored history. Run the same resolve command with the full-format YAML file."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Reassess after changes",
+    "subtitle": "Carry forward history while recalculating the affected components",
+    "blocks": [
+      {
+        "type": "code",
+        "args": [
+          "data-maturity analyze incoming/customers.xlsx --no-llm \\\n  --config my-config.yaml \\\n  --prior output/resolved-01/assessment_history.json \\\n  -o output/reassessed-01"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Use the newest history and retain the same source filename for the same logical asset. Supply your custom configuration again. A new --mission replaces the prior mission context; otherwise the prior context is retained. To explicitly clear mission requirements, pass an empty mission YAML mapping, {}."
+        ]
+      },
+      {
+        "type": "table",
+        "args": [
+          [
+            "Changed input",
+            "Expected behavior"
+          ],
+          [
+            [
+              "Source bytes or profiling/sampling inputs",
+              "Remeasure as needed. Changed source bytes conservatively require confirmation of old authoritative answers."
+            ],
+            [
+              "SME answers",
+              "Reuse unchanged measurements; update assertion versions and derive affected assessment results."
+            ],
+            [
+              "Rules or governance metadata",
+              "Reingest bounded rows while reusing unchanged profiles; reevaluate rule/governance effects."
+            ],
+            [
+              "Mission, maturity or model settings",
+              "Reuse measurements and recompute applicable derived components. Model changes may rerun optional reasoning."
+            ],
+            [
+              "No changed inputs",
+              "Record the invocation and stop according to no-change behavior. There is no background loop waiting to invent new knowledge."
+            ]
+          ],
+          [
+            197,
+            319
+          ]
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Read the delta and iteration record"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "assessment_delta.json separates quality, schema, semantic, governance, maturity, AI-readiness, mission and contract changes. Findings can be new, persistent, resolved or regressed. Read the supporting scope and evidence rather than treating every difference as deterioration."
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "assessment_history.json records triggers, components executed/skipped, resolutions, snapshots and decisions. Use these records to explain why a result changed. Source versions, rule versions and sampled scope can legitimately change the observed outcome."
+        ]
+      },
+      {
+        "type": "note",
+        "args": [
+          "Feedback is explicit",
+          "Each invocation handles one event. The MVP has no monitoring daemon, autonomous remediation executor or continuous scheduler. Accepted risk is reviewed during execution; the application does not wake itself when a review date arrives."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Create and compare named baselines",
+    "subtitle": "An immutable reference assessment for future evaluation",
+    "blocks": [
+      {
+        "type": "p",
+        "args": [
+          "A named baseline captures a reference assessment after its authority gates pass. It may still contain material findings and yield REMEDIATION_REQUIRED. It is not a certificate of perfect data or permission to use the dataset for every mission."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Create the reference"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "data-maturity analyze incoming/customers.xlsx --no-llm \\\n  --config my-config.yaml \\\n  --prior output/resolved-01/assessment_history.json \\\n  --baseline approved-v1 -o output/baseline-01"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "If blocking questions remain, resolve them or record a legitimate accepted-risk decision first. Do not fabricate answers to make the gate pass. You can also supply --baseline to resolve when the final batch of answers should establish the reference."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Compare a later source version"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "data-maturity analyze incoming/customers.xlsx --no-llm \\\n  --config my-config.yaml \\\n  --prior output/baseline-01/assessment_history.json \\\n  --compare-baseline approved-v1 -o output/compared-01"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "The named baseline must exist in the supplied history. Its stored snapshot hash is validated before comparison. Names cannot be reused for a different baseline. Use a new name such as approved-v2 after a later approved change."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Preserve the evidence chain"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Keep history, snapshots and manifests with each reference. Editing a snapshot can invalidate baseline comparison. Ordinary JSON history is not a signed or tamper-proof audit system; use your organization's archive and approval controls when that level of assurance is needed."
+        ]
+      },
+      {
+        "type": "note",
+        "args": [
+          "Read dimensions independently",
+          "A semantic definition can improve while quality regresses; a rule can be tightened while source data stays unchanged. Baseline comparison exposes these changes separately. Proposed-contract drift is supported, but external schema-registry enforcement is not implemented."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Use mock or local model reasoning",
+    "subtitle": "Optional inference without changing deterministic measurement",
+    "blocks": [
+      {
+        "type": "h",
+        "args": [
+          "Exercise the model path without a model server"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "data-maturity analyze tests/fixtures/ambiguous_manufacturing.xlsx \\\n  --config configs/test_mock_llm.yaml -o output/mock-01"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "The deterministic Mock provider is for exercising the integration. Its output is not evidence of a real model's semantic accuracy. The default/no-LLM path remains suitable for a first assessment."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Connect an existing Ollama model"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Install and start Ollama using its official installation instructions, and make a suitable model available under the name you intend to use. This capability does not install servers, download weights or select a model for you. Copy configs/local.yaml and replace YOUR_INSTALLED_MODEL in each configured role."
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "llm_enabled: true\nsecurity:\n  mode: local_only\nllm_context:\n  include_samples: false\nmodels:\n  semantic_inference:\n    provider: ollama\n    model: YOUR_INSTALLED_MODEL\n    base_url: http://127.0.0.1:11434\n    timeout: 30\n    json_schema: true"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "data-maturity analyze incoming/customers.xlsx \\\n  --config local-model.yaml -o output/local-model-01"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Local endpoints must use a literal loopback address: 127.0.0.1 or [::1]. localhost and private LAN addresses are classified as remote. For an existing vLLM or compatible local server, use provider: openai_compatible and its loopback base URL, commonly ending in /v1."
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "A loopback endpoint does not prove the server itself avoids remote forwarding. Verify the server configuration. Real downloaded models were not executed during MVP delivery validation; transport, retry and policy behavior were tested using controlled transports."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Configure remote inference and roles",
+    "subtitle": "Explicit metadata permission and secrets supplied at runtime",
+    "blocks": [
+      {
+        "type": "p",
+        "args": [
+          "Use a remote service only when you are authorized to transmit the selected data to that endpoint. The following template enables metadata-only transmission; replace the endpoint and model with values for your existing service."
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "llm_enabled: true\nsecurity:\n  mode: hybrid\n  allow_metadata_to_remote_models: true\n  allow_raw_data_to_remote_models: false\nllm_context:\n  include_samples: false\nmodels:\n  semantic_inference:\n    provider: openai_compatible\n    model: YOUR_CONFIGURED_MODEL\n    base_url: https://YOUR_SERVICE/v1\n    api_key_env: DATA_MATURITY_API_KEY\n    timeout: 30\n    json_schema: true"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Set DATA_MATURITY_API_KEY through your shell or secret manager before invoking the CLI. Do not place its value in the configuration, source file or report. .env files are not automatically read. Avoid credentials, query strings or fragments in base_url; remote inference requires HTTPS."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Independent reasoning roles"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "semantic_inference, quality_reasoning, governance_reasoning, maturation_reasoning and report_generation can each have a provider/model entry. Missing roles are skipped. Explanations are attributed in analyst_notes; deterministic reports are available even when report_generation is absent."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Provider settings"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Defaults: timeout 30 seconds, temperature 0, max_output_tokens 2048 and json_schema true. Set json_schema false when your compatible service supports JSON output but not the requested schema format; responses still undergo validation. Global llm_max_attempts defaults to 2 and is bounded at 5."
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "An unavailable model can degrade optional reasoning; it must not supply measurements or authority. A policy violation fails before transmission. To rerun deterministically, use analyze --no-llm with a new output directory."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Security and responsible handling",
+    "subtitle": "Protect inputs, outputs, configuration and model traffic",
+    "blocks": [
+      {
+        "type": "table",
+        "args": [
+          [
+            "Boundary",
+            "What the application does"
+          ],
+          [
+            [
+              "Untrusted workbook content",
+              "Treats values and metadata as data. Model output has no tool execution interface; instructions in cells cannot change policy or deterministic scores."
+            ],
+            [
+              "Local-only inference",
+              "Rejects remote-configured inference before transmission. Loopback-only classification avoids hostname ambiguity."
+            ],
+            [
+              "Metadata-only model context",
+              "Allowlisted field names/types, aggregate counts and reference information. Excludes full rows, common values, extrema and human answers."
+            ],
+            [
+              "Optional raw samples",
+              "Disabled by default. include_samples must be enabled; remote transmission additionally needs raw-data permission. Sampling is bounded."
+            ],
+            [
+              "Transport and references",
+              "Disables redirects and environment proxies. Validates JSON and existing evidence/field references with bounded retries."
+            ],
+            [
+              "Assessment bundles",
+              "Stages reports atomically and uses owner-only filesystem permissions on Unix. Does not overwrite a nonempty destination."
+            ]
+          ],
+          [
+            166,
+            350
+          ]
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Your operating responsibilities"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Keep trusted configuration and answer files under controlled access. Field names, metadata, aggregate statistics, extrema and human answers in local reports may themselves be sensitive. No full DLP system, encryption-at-rest service, enterprise IAM or tamper-proof history store is included."
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Do not paste secrets or unnecessary personal information into a resolution. Do not publish source files or reports merely because the application code is public. A local model server must be configured not to forward content remotely."
+        ]
+      },
+      {
+        "type": "note",
+        "args": [
+          "Scope of the verified defenses",
+          "The security suite exercised policy denial, payload minimization, prompt injection and fabricated-reference rejection. Schema validation cannot prove every model explanation correct. Keep inferred text subject to human review, especially when it affects operational interpretation."
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "For inspection redirection and profile.json, use a protected working directory: those paths do not use the full assessment bundle writer. Windows permissions differ from Unix and require local review."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Interpret maturity and AI readiness",
+    "subtitle": "Criteria are explicit and cumulative, not model-generated scores",
+    "blocks": [
+      {
+        "type": "p",
+        "args": [
+          "Maturity is reported independently across ten dimensions: structure, schema_definition, data_quality, semantic_clarity, metadata, provenance_lineage, governance, machine_accessibility, data_contracts and ai_readiness. Do not average them into an unsupported overall certification."
+        ]
+      },
+      {
+        "type": "table",
+        "args": [
+          [
+            "Level",
+            "Name",
+            "How to read it"
+          ],
+          [
+            [
+              "0",
+              "UNMANAGED",
+              "The first level's criteria have not all been established."
+            ],
+            [
+              "1",
+              "STRUCTURED",
+              "First-level requirements satisfied for this dimension."
+            ],
+            [
+              "2",
+              "DEFINED",
+              "Levels 1 and 2 satisfied cumulatively."
+            ],
+            [
+              "3",
+              "GOVERNED",
+              "All requirements through level 3 satisfied."
+            ],
+            [
+              "4",
+              "OPERATIONALIZED",
+              "All requirements through level 4 satisfied."
+            ],
+            [
+              "5",
+              "AI_READY",
+              "All configured requirements through level 5 satisfied."
+            ]
+          ],
+          [
+            45,
+            153,
+            318
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Each dimension includes satisfied_criteria, missing_criteria, next_level_requirements, blocking_findings and evidence_refs. Criteria differ by dimension. Inspect the actual requirements rather than interpreting the shared level name as proof of enterprise-wide maturity."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Separate readiness result"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "AI readiness considers accessibility, structure, semantics, quality, provenance, lineage, governance, documentation, contracts, stability, observability and intended-use suitability. It returns READY, NOT_READY or UNDETERMINED with blockers. A clean file can remain NOT_READY because authority, monitoring or mission evidence is absent."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Customize responsibly"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "The default model is in configs/maturity_model.yaml and packaged with the application. To customize it, put the model's version and dimensions under the top-level maturity_model key in your complete configuration. Levels must be contiguous from level_1, with nonempty requirements. Unknown criterion names never pass."
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "Editing the standalone example YAML does not automatically change the packaged model used by an ordinary invocation. A new criterion requires code support, not just a new label. Operational authority/contract/monitoring criteria may remain unmet in this MVP; generating a proposed contract does not establish operational adoption."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Operate and maintain the capability",
+    "subtitle": "A repeatable local operating procedure",
+    "blocks": [
+      {
+        "type": "h",
+        "args": [
+          "For each asset and iteration"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "<b>1.</b> Preserve the source artifact and its controlled version. <b>2.</b> Review discovery before interpreting findings. <b>3.</b> Run with an explicit configuration and unique output folder. <b>4.</b> Read scope, lifecycle and mission results. <b>5.</b> Route questions to accountable people. <b>6.</b> Record decisions, remediate upstream and reassess. <b>7.</b> Archive the complete bundle and configuration together."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Validate an installation or update"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "sh scripts/test.sh\npytest -m security\nsh scripts/demo.sh\npython -m build"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "These commands require the dev installation. The test script runs Ruff, mypy and coverage-enabled pytest. The build command produces a source distribution and wheel. Fixtures and tests are synthetic; they do not establish domain fitness of your real dataset."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Update intentionally"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "git status --short\ngit pull --ff-only\npython -m pip install -e \".[dev]\"\nsh scripts/test.sh"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Review and preserve local source/configuration changes before pulling. The manual targets the release tag listed on its last page; a newer repository revision may change behavior. Record the revision you actually run with git rev-parse HEAD. requirements-dev.lock captures the original development dependency set; it is not a universal cross-platform compatibility guarantee."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Storage and automation"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "History snapshots grow over iterations; archival and compaction are manual. Maintain backups and access controls. There is no built-in scheduler. If you wrap the CLI in an external job, choose unique output folders and inspect structured decisions rather than treating exit 0 as a quality pass."
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "To uninstall the package from an active environment: python -m pip uninstall data-maturity-agent. That does not delete sources or reports. Retain assessment records according to your actual retention policy."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Troubleshoot installation and input",
+    "subtitle": "Resolve environmental and structural problems first",
+    "blocks": [
+      {
+        "type": "table",
+        "args": [
+          [
+            "Symptom",
+            "Likely cause and next step"
+          ],
+          [
+            [
+              "data-maturity not found",
+              "Activate the correct venv or call its executable directly. Verify python -m pip show data-maturity-agent. A fallback is python -m data_maturity.cli --help."
+            ],
+            [
+              "venv / ensurepip unavailable",
+              "Install the appropriate venv support for your interpreter through your platform's normal package-management process; then recreate the environment."
+            ],
+            [
+              "PowerShell activation blocked",
+              "Use .venv\\Scripts\\python.exe and .venv\\Scripts\\data-maturity.exe directly. The manual does not require weakening execution policy."
+            ],
+            [
+              "Source path not found",
+              "Run from the repository root for relative examples; quote paths containing spaces. Confirm the actual file extension."
+            ],
+            [
+              "Fixture workbook missing",
+              "Run python scripts/generate_test_workbooks.py before using the .xlsx examples."
+            ],
+            [
+              "Unsupported or unreadable workbook",
+              "Use XLSX/XLSM or UTF-8 CSV/TSV. Encrypted/corrupt workbooks and legacy .xls need a controlled export first."
+            ],
+            [
+              "Unexpected tables or headers",
+              "Inspect region boundaries, blank separators, hidden content and canonical names. Prepare a simpler tabular export if discovery is wrong."
+            ],
+            [
+              "More missing values than expected",
+              "Check formula_results_unavailable and scope. Unexecuted formula results contribute to null counts; they are not confirmed blank source cells."
+            ],
+            [
+              "Input-size or cell bound exceeded",
+              "Review the applicable profiling limit and available resources. Increase deliberately or split/export the source; do not assume a partial report is complete."
+            ],
+            [
+              "Output already exists",
+              "Choose a new output folder. profile requires a nonexistent destination; analyze/resolve allow a new or empty one."
+            ]
+          ],
+          [
+            176,
+            340
+          ]
+        ]
+      },
+      {
+        "type": "note",
+        "args": [
+          "Keep useful diagnostics",
+          "Capture the exact command without secrets, package/repository version, exception summary, source format and applicable configuration settings. Prefer a synthetic reproduction instead of sharing a sensitive workbook or full report."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Troubleshoot assessments and models",
+    "subtitle": "Distinguish missing authority from an execution problem",
+    "blocks": [
+      {
+        "type": "table",
+        "args": [
+          [
+            "Symptom",
+            "What to check"
+          ],
+          [
+            [
+              "Configuration or model validation failed",
+              "Check YAML indentation, field names, enum values, duplicated rule IDs and the 2 MB limit. Compare against a minimal valid configuration; full raw validation content is suppressed."
+            ],
+            [
+              "WAITING_FOR_HUMAN persists",
+              "Inspect current blocking questions. Non-authoritative answers remain open; unrelated unanswered questions can still block. Use current IDs, not superseded targets."
+            ],
+            [
+              "resolve says source changed",
+              "Analyze the current source with --prior into a new bundle, then answer questions from that bundle using the same current source."
+            ],
+            [
+              "Rule seems absent",
+              "Check dataset selector and field mapping. A dataset mismatch can skip it; an absent field produces UNDETERMINED. Verify rule_id in quality_report.json."
+            ],
+            [
+              "Freshness is UNDETERMINED",
+              "Supply timezone-aware timestamps and an explicit timeliness freshness rule. A narrative requirement or max_age_days in mission context alone is insufficient."
+            ],
+            [
+              "local_only forbids remote inference",
+              "Use a genuine loopback server with a literal IP. localhost and LAN addresses count as remote. Use --no-llm if inference is unnecessary."
+            ],
+            [
+              "Remote metadata/raw permission denied",
+              "Review policy and intended transmission. Metadata and raw samples require separate permission. Do not loosen policy merely to silence an error."
+            ],
+            [
+              "Model connection / auth / JSON failure",
+              "Verify running server, exact model name, base URL, key environment variable and timeout. Try json_schema: false for a JSON-only compatible server."
+            ],
+            [
+              "DEGRADED or missing analyst notes",
+              "Inspect component_status and configured roles. Optional model failure can preserve valid deterministic results. Missing roles are intentionally skipped."
+            ],
+            [
+              "Named baseline not found or invalid",
+              "Supply the history containing that exact name and intact snapshot. Do not repair history by hand; restore the valid archived bundle."
+            ]
+          ],
+          [
+            183,
+            333
+          ]
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "Known remaining boundaries: complex Excel layouts, cross-name/composite foreign-key discovery, real-model accuracy, enterprise identity, external contract enforcement and automatic monitoring. These are not settings that a user can turn on in the shipped MVP."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Command reference",
+    "subtitle": "Exact command and option availability in version 0.1.1",
+    "blocks": [
+      {
+        "type": "table",
+        "args": [
+          [
+            "Command",
+            "Arguments and options"
+          ],
+          [
+            [
+              "inspect",
+              "SOURCE; --config FILE; --help. Structure JSON on stdout; no --output."
+            ],
+            [
+              "profile",
+              "SOURCE; --config FILE; --output DIR / -o DIR; --help. profile.json or stdout; no inference."
+            ],
+            [
+              "analyze",
+              "SOURCE; --config FILE; --output DIR / -o DIR; --mission FILE; --no-llm; --prior FILE; --baseline NAME; --compare-baseline NAME; --help."
+            ],
+            [
+              "resolve",
+              "ASSESSMENT ANSWERS; required --source FILE; --output DIR / -o DIR; --config FILE; --baseline NAME; --help."
+            ]
+          ],
+          [
+            83,
+            433
+          ]
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "data-maturity --help\ndata-maturity inspect --help\ndata-maturity profile --help\ndata-maturity analyze --help\ndata-maturity resolve --help"
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Path and option rules"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "SOURCE, ASSESSMENT and ANSWERS are positional file arguments. -o and --output are aliases. --no-llm exists on analyze, not resolve; resolve inherits prior settings unless you supply --config. Mission selection is on analyze; resolve preserves the prior mission."
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "--prior accepts assessment.json or assessment_history.json. Full history is required for named baseline comparison. --baseline requests creation of an immutable name after gates pass; --compare-baseline selects a name already in the supplied history."
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Useful shell patterns"
+        ]
+      },
+      {
+        "type": "code",
+        "args": [
+          "data-maturity inspect incoming/customers.csv > inspection.json\ndata-maturity profile incoming/customers.tsv > profile.json\ndata-maturity analyze incoming/customers.xlsx --no-llm \\\n  -o output/run-01"
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "Shell redirection can overwrite a file and follows the shell's permissions; the application's output-directory protection does not apply to redirected stdout. On PowerShell, use one line or replace a trailing backslash with a backtick for multiline commands."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Glossary, sources and release scope",
+    "subtitle": "Use this manual with the specific MVP it documents",
+    "blocks": [
+      {
+        "type": "table",
+        "args": [
+          [
+            "Term",
+            "Meaning"
+          ],
+          [
+            [
+              "Dataset / field",
+              "A discovered tabular region and one of its columns; each has an identifier used by rules, questions and evidence."
+            ],
+            [
+              "Evidence reference",
+              "An ID linking an assertion, rule result or finding to recorded measurement/provenance."
+            ],
+            [
+              "Assertion / finding",
+              "An assertion represents knowledge or uncertainty. A finding identifies a measured issue, candidate concern or unresolved gap."
+            ],
+            [
+              "SME / authority",
+              "Subject-matter expert and the attributed basis for accepting an answer. Identity is supplied, not enterprise-authenticated."
+            ],
+            [
+              "Proposed contract",
+              "Machine-readable target schema and expectations for review. It does not enforce a registry or runtime contract."
+            ],
+            [
+              "Iteration / baseline",
+              "An explicit assessment event; an immutable named snapshot selected as a reference for future comparisons."
+            ]
+          ],
+          [
+            146,
+            370
+          ]
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Documentation basis"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "Prepared 19 September 2026 for Data Maturity Agent <b>0.1.1</b>, release tag <b>v0.1.1</b>. Instructions were checked against the shipped CLI, configuration models, evaluators, controller, report writer and repository documentation."
+        ]
+      },
+      {
+        "type": "small",
+        "args": [
+          "<link href=\"https://github.com/drcrael/agentic-data-ops/tree/v0.1.1\" color=\"#007F83\">Versioned repository and README</link><br/><link href=\"https://github.com/drcrael/agentic-data-ops/blob/v0.1.1/VALIDATION.md\" color=\"#007F83\">Executed validation report</link> | <link href=\"https://github.com/drcrael/agentic-data-ops/blob/v0.1.1/LIMITATIONS.md\" color=\"#007F83\">MVP limitations</link><br/><link href=\"https://github.com/drcrael/agentic-data-ops/blob/v0.1.1/docs/control-loop.md\" color=\"#007F83\">Assessment control loop</link> | <link href=\"https://github.com/drcrael/agentic-data-ops/blob/v0.1.1/SECURITY.md\" color=\"#007F83\">Security model</link>"
+        ]
+      },
+      {
+        "type": "h",
+        "args": [
+          "Verified release scope"
+        ]
+      },
+      {
+        "type": "p",
+        "args": [
+          "See VALIDATION.md and the release verification report for the executed test results, installation checks and platform coverage for this version. These are software verification results, not guarantees about your data or real-model semantic accuracy."
+        ]
+      },
+      {
+        "type": "note",
+        "args": [
+          "First-use completion check",
+          "You can display CLI help, generate fixtures, produce a no-LLM assessment in a new folder, identify its scope and lifecycle, locate evidence and questions, and explain which facts still require human authority. Then repeat the workflow on a controlled copy of your own asset."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,226 @@
+format: data-maturity-proposed-contract/v1
+contracts:
+- contract_id: contract:228bfc91335d996a32b4ec11
+  contract_version: 0.1.1
+  status: proposed
+  dataset_id: dataset:aea046cab5baa7321637b0a6
+  name: Customers
+  description: null
+  owner: null
+  schema_definition:
+    fields:
+    - field_id: field:e17faeafb3f36d27b116d92b
+      source_name: customer_id
+      canonical_name: customer_id
+      physical_type: mixed
+      semantic_type: identifier
+      description: null
+      nullable: null
+      unit: null
+      format: null
+      enum: null
+      constraints:
+        semantic_type_status: INFERRED
+      key_membership: []
+      provenance:
+      - evidence:4cef4b91ea4a05b2e1afb18a
+      unresolved_properties:
+      - definition
+      - nullable
+      status: proposed
+    - field_id: field:46ebc891a76937de13a63389
+      source_name: customer_name
+      canonical_name: customer_name
+      physical_type: string
+      semantic_type: name
+      description: null
+      nullable: null
+      unit: null
+      format: null
+      enum: null
+      constraints:
+        semantic_type_status: INFERRED
+      key_membership: []
+      provenance:
+      - evidence:a6e218fc3935394674fe4c11
+      unresolved_properties:
+      - definition
+      - nullable
+      status: proposed
+    - field_id: field:7a2244782b2cbd92990f85de
+      source_name: state
+      canonical_name: state
+      physical_type: string
+      semantic_type: category
+      description: null
+      nullable: null
+      unit: null
+      format: null
+      enum: null
+      constraints:
+        semantic_type_status: INFERRED
+      key_membership: []
+      provenance:
+      - evidence:5251f836c1f901de2055c575
+      unresolved_properties:
+      - definition
+      - nullable
+      status: proposed
+    - field_id: field:a54e90a37bddb94e0667894b
+      source_name: status
+      canonical_name: status
+      physical_type: string
+      semantic_type: status
+      description: null
+      nullable: null
+      unit: null
+      format: null
+      enum: null
+      constraints:
+        semantic_type_status: INFERRED
+      key_membership: []
+      provenance:
+      - evidence:efd675a6196ddd2a8d50c782
+      unresolved_properties:
+      - code_definitions
+      - definition
+      - nullable
+      status: proposed
+    - field_id: field:34f5c322639ddeec7d27bd0e
+      source_name: created_at
+      canonical_name: created_at
+      physical_type: mixed
+      semantic_type: timestamp
+      description: null
+      nullable: null
+      unit: null
+      format: null
+      enum: null
+      constraints:
+        semantic_type_status: INFERRED
+      key_membership: []
+      provenance:
+      - evidence:650afac3e7f09c78af73b89d
+      unresolved_properties:
+      - definition
+      - nullable
+      - temporal_semantics
+      status: proposed
+    status: proposed
+  keys: []
+  relationships: []
+  quality_rules: []
+  update_expectations: null
+  provenance:
+    source_file: dirty_customers.xlsx
+    source_sha256: d9ac77da7beeff5fe4a1ff8f923837be9772e0f2d56bb7dd959678e4bee4c25e
+    lineage: null
+  governance:
+    items:
+    - property: owner
+      status: UNRESOLVED
+      value: null
+      evidence_refs:
+      - evidence:bc0d37eb228904982415210a
+      assertion_id: assertion:a6b327c5a3ecacf91bfdb240
+    - property: steward
+      status: UNRESOLVED
+      value: null
+      evidence_refs:
+      - evidence:f21b27ce23c3c68dd7990a81
+      assertion_id: assertion:34380d006cb4f82e49f097a5
+    - property: authoritative_source
+      status: UNRESOLVED
+      value: null
+      evidence_refs:
+      - evidence:7026d2189af6b19c5e3cf7cf
+      assertion_id: assertion:2ff5b096683535e6a3a0646c
+    - property: source_system
+      status: UNRESOLVED
+      value: null
+      evidence_refs:
+      - evidence:bad804492f05241a15f0bf72
+      assertion_id: assertion:e191c69c52587630c6eb2311
+    - property: provenance
+      status: UNRESOLVED
+      value: null
+      evidence_refs:
+      - evidence:bd40c5b1523aaafe42ccc7db
+      assertion_id: assertion:fc068841ebe44ce3a4fa66dd
+    - property: lineage
+      status: UNRESOLVED
+      value: null
+      evidence_refs:
+      - evidence:1e916eeebc0ff8f212f9fd03
+      assertion_id: assertion:748cd4a17f1771e5dd0375e8
+    - property: sensitivity
+      status: UNRESOLVED
+      value: null
+      evidence_refs:
+      - evidence:aad7f6035568b437b42496c6
+      assertion_id: assertion:c490bb996b3c4a85d6639544
+    - property: security_classification
+      status: UNRESOLVED
+      value: null
+      evidence_refs:
+      - evidence:9dfd604551b9fc51cd3981a6
+      assertion_id: assertion:6b1655a08ca62ed4bcc2f8b9
+    - property: access_constraints
+      status: UNRESOLVED
+      value: null
+      evidence_refs:
+      - evidence:a16201e58695fb75267c29ee
+      assertion_id: assertion:91ed74e1036aeee1b2fa66ec
+    - property: retention
+      status: UNRESOLVED
+      value: null
+      evidence_refs:
+      - evidence:4e2350091176e0d7b15851f2
+      assertion_id: assertion:71c950dc2c1dfeea4b7925da
+    - property: update_cadence
+      status: UNRESOLVED
+      value: null
+      evidence_refs:
+      - evidence:2198f3250d85342dba0d016e
+      assertion_id: assertion:670e4b4d6e758783e42714ec
+    - property: version
+      status: UNRESOLVED
+      value: null
+      evidence_refs:
+      - evidence:f2ad6bae188e205284ce853c
+      assertion_id: assertion:e53ce4e01666e3985f8dc2c5
+    - property: licensing
+      status: UNRESOLVED
+      value: null
+      evidence_refs:
+      - evidence:b036483e08687215ad245e52
+      assertion_id: assertion:3e195392245f1950c7d50cd9
+    - property: quality_accountability
+      status: UNRESOLVED
+      value: null
+      evidence_refs:
+      - evidence:063c18b17a44e4169d2d01ac
+      assertion_id: assertion:9a8199598d6902506336ef65
+  mission_requirement_refs: []
+  unresolved_items:
+  - assertion:2ae443d1a867f03bb7daaa4f
+  - assertion:bba81c47f3b32bcadc9dede0
+  - assertion:860891a51d364b0b63f334ce
+  - assertion:4f420c34fe8af94f52be49d6
+  - assertion:7357bf1ddfcc328ec918ccf4
+  - assertion:c187667dfad77cea519a1945
+  - assertion:54dc19d2cac8824ad913bec3
+  - assertion:a6b327c5a3ecacf91bfdb240
+  - assertion:34380d006cb4f82e49f097a5
+  - assertion:2ff5b096683535e6a3a0646c
+  - assertion:e191c69c52587630c6eb2311
+  - assertion:fc068841ebe44ce3a4fa66dd
+  - assertion:748cd4a17f1771e5dd0375e8
+  - assertion:c490bb996b3c4a85d6639544
+  - assertion:6b1655a08ca62ed4bcc2f8b9
+  - assertion:91ed74e1036aeee1b2fa66ec
+  - assertion:71c950dc2c1dfeea4b7925da
+  - assertion:670e4b4d6e758783e42714ec
+  - assertion:e53ce4e01666e3985f8dc2c5
+  - assertion:3e195392245f1950c7d50cd9
+  - assertion:9a8199598d6902506336ef65

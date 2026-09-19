@@ -1,0 +1,10 @@
+# A complete config accepted by --config; expectations are explicitly USER_DEFINED.
+quality_rules_version: '1'
+quality_rules:
+  - rule_id: temperature_above_absolute_zero
+    field: temperature
+    dimension: validity
+    operator: range
+    parameters: {min: -273.15}
+    severity: critical
+    origin: USER_DEFINED

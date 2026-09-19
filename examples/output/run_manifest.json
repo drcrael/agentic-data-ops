@@ -1,0 +1,86 @@
+{
+  "application_version": "0.1.1",
+  "assessment_id": "assessment:eb551f55094776a84ab31df1",
+  "started_at": "2026-09-19T18:47:53.170400+00:00",
+  "completed_at": "2026-09-19 18:47:53.217049+00:00",
+  "source_file": "dirty_customers.xlsx",
+  "source_sha256": "d9ac77da7beeff5fe4a1ff8f923837be9772e0f2d56bb7dd959678e4bee4c25e",
+  "configuration_hash": "9a1d81f221e097061eed24019e2845614fc9959466ea12629865ab7744556d89",
+  "quality_rules_version": "1",
+  "maturity_model_version": "1",
+  "llm_enabled": false,
+  "models": {},
+  "prompt_versions": {},
+  "sampling": {
+    "dataset:aea046cab5baa7321637b0a6": {
+      "scope": "full",
+      "seed": 42,
+      "method": "full",
+      "source_rows": 6,
+      "measured_rows": 6,
+      "truncated": false
+    }
+  },
+  "security_mode": "local_only",
+  "component_status": [
+    {
+      "component": "ingestion",
+      "status": "COMPLETE",
+      "dataset_id": null,
+      "stage": "ingestion",
+      "reason": null,
+      "recoverable": true
+    },
+    {
+      "component": "discovery",
+      "status": "COMPLETE",
+      "dataset_id": null,
+      "stage": "discovery",
+      "reason": null,
+      "recoverable": true
+    },
+    {
+      "component": "profiling",
+      "status": "COMPLETE",
+      "dataset_id": null,
+      "stage": "profiling",
+      "reason": null,
+      "recoverable": true
+    },
+    {
+      "component": "quality",
+      "status": "COMPLETE",
+      "dataset_id": null,
+      "stage": "quality",
+      "reason": null,
+      "recoverable": true
+    },
+    {
+      "component": "relationships",
+      "status": "COMPLETE",
+      "dataset_id": null,
+      "stage": "relationships",
+      "reason": null,
+      "recoverable": true
+    },
+    {
+      "component": "llm",
+      "status": "SKIPPED",
+      "dataset_id": null,
+      "stage": "reasoning",
+      "reason": "Disabled by configuration or --no-llm",
+      "recoverable": true
+    }
+  ],
+  "artifact_sha256": {
+    "assessment.json": "180641cbe677543fca880c53a16f5503a61b24723847826b188b466743439501",
+    "schema.json": "4b738a109d18b8f9c39247f0bdc9aaabfae7f6f11a0ac790e1d5580a1b918758",
+    "quality_report.json": "a442610430378a85e510e1b3bc111eb0713d14cbbd76cc3a736f0ee1b30b1963",
+    "evidence.json": "eeecdb41d77e093ef19507040c4f91dc52d06a65c92e673b55239e46be28f2c0",
+    "evidence_graph.json": "c3a02e6fc6e2f6338f0b2457917cf080099c07fe4d7eedab5a276c2b5969d10d",
+    "assessment_history.json": "31af07eaecc5379f8103f5b8df2e7b7b9f818c822ffbde3d6a59e388610a27fd",
+    "data_contract.yaml": "52bf628130c16e90370294f042d20dc50c0e14bbed5543cafb8e6bafbe16abca",
+    "sme_questions.md": "782d005fc7ea6c9eb0d5005817d91111ba8698eba04471c859071c08877e4dc5",
+    "maturity_report.md": "8c5fe0e40a1e1797c372779faa4a780528f67548418fc45e46189e7e662f734f"
+  }
+}

@@ -1,0 +1,703 @@
+[
+  {
+    "evidence_id": "evidence:4cef4b91ea4a05b2e1afb18a",
+    "evidence_type": "column_profile",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": "field:e17faeafb3f36d27b116d92b",
+    "description": "column profile",
+    "value": {
+      "field_id": "field:e17faeafb3f36d27b116d92b",
+      "row_count": 6,
+      "null_count": 1,
+      "null_percentage": 16.666666666666668,
+      "unique_count": 4,
+      "uniqueness_ratio": 0.8,
+      "duplicate_count": 1,
+      "duplicate_frequency": 0.2,
+      "physical_type": "mixed",
+      "type_counts": {
+        "integer": 4,
+        "string": 1
+      },
+      "mixed_type_rate": 0.19999999999999996,
+      "minimum": 1.0,
+      "maximum": 5.0,
+      "mean": 2.5,
+      "median": 2.0,
+      "standard_deviation": 1.6583123951777,
+      "quantiles": {
+        "q25": 1.0,
+        "q50": 2.0,
+        "q75": 3.5
+      },
+      "min_length": 1,
+      "max_length": 1,
+      "common_values": [],
+      "likely_enum": [],
+      "invalid_date_count": 0,
+      "date_format_counts": {},
+      "whitespace_count": 0,
+      "casing_variation_count": 0,
+      "numeric_string_count": 1,
+      "nonfinite_count": 0,
+      "anomaly_counts": {
+        "iqr": 0,
+        "mad": 0,
+        "length_iqr": 0,
+        "rare_categories": 0
+      }
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": "field:e17faeafb3f36d27b116d92b",
+      "row": null,
+      "cell_range": "A1:E7",
+      "calculation": "column_profile"
+    },
+    "generated_by": "deterministic/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.210758Z",
+    "state": "OBSERVED",
+    "scope": "full"
+  },
+  {
+    "evidence_id": "evidence:a6e218fc3935394674fe4c11",
+    "evidence_type": "column_profile",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": "field:46ebc891a76937de13a63389",
+    "description": "column profile",
+    "value": {
+      "field_id": "field:46ebc891a76937de13a63389",
+      "row_count": 6,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 5,
+      "uniqueness_ratio": 0.8333333333333334,
+      "duplicate_count": 1,
+      "duplicate_frequency": 0.16666666666666666,
+      "physical_type": "string",
+      "type_counts": {
+        "string": 6
+      },
+      "mixed_type_rate": 0.0,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "median": null,
+      "standard_deviation": null,
+      "quantiles": {},
+      "min_length": 3,
+      "max_length": 5,
+      "common_values": [],
+      "likely_enum": [],
+      "invalid_date_count": 0,
+      "date_format_counts": {},
+      "whitespace_count": 1,
+      "casing_variation_count": 0,
+      "numeric_string_count": 0,
+      "nonfinite_count": 0,
+      "anomaly_counts": {
+        "length_iqr": 1,
+        "rare_categories": 0
+      }
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": "field:46ebc891a76937de13a63389",
+      "row": null,
+      "cell_range": "A1:E7",
+      "calculation": "column_profile"
+    },
+    "generated_by": "deterministic/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.210921Z",
+    "state": "OBSERVED",
+    "scope": "full"
+  },
+  {
+    "evidence_id": "evidence:5251f836c1f901de2055c575",
+    "evidence_type": "column_profile",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": "field:7a2244782b2cbd92990f85de",
+    "description": "column profile",
+    "value": {
+      "field_id": "field:7a2244782b2cbd92990f85de",
+      "row_count": 6,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4,
+      "uniqueness_ratio": 0.6666666666666666,
+      "duplicate_count": 2,
+      "duplicate_frequency": 0.3333333333333333,
+      "physical_type": "string",
+      "type_counts": {
+        "string": 6
+      },
+      "mixed_type_rate": 0.0,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "median": null,
+      "standard_deviation": null,
+      "quantiles": {},
+      "min_length": 2,
+      "max_length": 2,
+      "common_values": [],
+      "likely_enum": [],
+      "invalid_date_count": 0,
+      "date_format_counts": {},
+      "whitespace_count": 0,
+      "casing_variation_count": 4,
+      "numeric_string_count": 0,
+      "nonfinite_count": 0,
+      "anomaly_counts": {
+        "length_iqr": 0,
+        "rare_categories": 0
+      }
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": "field:7a2244782b2cbd92990f85de",
+      "row": null,
+      "cell_range": "A1:E7",
+      "calculation": "column_profile"
+    },
+    "generated_by": "deterministic/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.211037Z",
+    "state": "OBSERVED",
+    "scope": "full"
+  },
+  {
+    "evidence_id": "evidence:efd675a6196ddd2a8d50c782",
+    "evidence_type": "column_profile",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": "field:a54e90a37bddb94e0667894b",
+    "description": "column profile",
+    "value": {
+      "field_id": "field:a54e90a37bddb94e0667894b",
+      "row_count": 6,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 5,
+      "uniqueness_ratio": 0.8333333333333334,
+      "duplicate_count": 1,
+      "duplicate_frequency": 0.16666666666666666,
+      "physical_type": "string",
+      "type_counts": {
+        "string": 6
+      },
+      "mixed_type_rate": 0.0,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "median": null,
+      "standard_deviation": null,
+      "quantiles": {},
+      "min_length": 1,
+      "max_length": 8,
+      "common_values": [],
+      "likely_enum": [],
+      "invalid_date_count": 0,
+      "date_format_counts": {},
+      "whitespace_count": 1,
+      "casing_variation_count": 4,
+      "numeric_string_count": 0,
+      "nonfinite_count": 0,
+      "anomaly_counts": {
+        "length_iqr": 1,
+        "rare_categories": 0
+      }
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": "field:a54e90a37bddb94e0667894b",
+      "row": null,
+      "cell_range": "A1:E7",
+      "calculation": "column_profile"
+    },
+    "generated_by": "deterministic/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.211156Z",
+    "state": "OBSERVED",
+    "scope": "full"
+  },
+  {
+    "evidence_id": "evidence:650afac3e7f09c78af73b89d",
+    "evidence_type": "column_profile",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": "field:34f5c322639ddeec7d27bd0e",
+    "description": "column profile",
+    "value": {
+      "field_id": "field:34f5c322639ddeec7d27bd0e",
+      "row_count": 6,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 5,
+      "uniqueness_ratio": 0.8333333333333334,
+      "duplicate_count": 1,
+      "duplicate_frequency": 0.16666666666666666,
+      "physical_type": "mixed",
+      "type_counts": {
+        "date": 3,
+        "string": 3
+      },
+      "mixed_type_rate": 0.5,
+      "minimum": "2025-01-01",
+      "maximum": "2025-01-05",
+      "mean": null,
+      "median": null,
+      "standard_deviation": null,
+      "quantiles": {},
+      "min_length": 10,
+      "max_length": 10,
+      "common_values": [],
+      "likely_enum": [],
+      "invalid_date_count": 3,
+      "date_format_counts": {
+        "ISO_DATE": 3
+      },
+      "whitespace_count": 0,
+      "casing_variation_count": 0,
+      "numeric_string_count": 0,
+      "nonfinite_count": 0,
+      "anomaly_counts": {
+        "length_iqr": 0,
+        "rare_categories": 0
+      }
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": "field:34f5c322639ddeec7d27bd0e",
+      "row": null,
+      "cell_range": "A1:E7",
+      "calculation": "column_profile"
+    },
+    "generated_by": "deterministic/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.211293Z",
+    "state": "OBSERVED",
+    "scope": "full"
+  },
+  {
+    "evidence_id": "evidence:490393998160a489a29185bf",
+    "evidence_type": "record_profile",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "record profile",
+    "value": {
+      "rows": 6,
+      "duplicate_records": 1
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": "A1:E7",
+      "calculation": "record_profile"
+    },
+    "generated_by": "deterministic/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.211322Z",
+    "state": "OBSERVED",
+    "scope": "full"
+  },
+  {
+    "evidence_id": "evidence:17654c2cf035209d9d012c9c",
+    "evidence_type": "structure_inspection",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "structure inspection",
+    "value": {
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "cell_range": "A1:E7",
+      "header_row": 1,
+      "confidence": 0.9,
+      "detection_method": "blank_boundaries_and_header",
+      "alternatives": [
+        "Boundary/header inferred; confirm against source documentation"
+      ],
+      "collisions": [],
+      "source_row_count": 6,
+      "rows_scanned": 6,
+      "rows_retained": 6,
+      "sampled": false,
+      "truncated": false,
+      "sampling_method": "full",
+      "seed": 42,
+      "formula_count": 0,
+      "formula_locations": [],
+      "warnings": []
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": "A1:E7",
+      "calculation": "structure_inspection"
+    },
+    "generated_by": "deterministic/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.211887Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  },
+  {
+    "evidence_id": "evidence:bc0d37eb228904982415210a",
+    "evidence_type": "governance_metadata",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "governance metadata",
+    "value": {
+      "property": "owner",
+      "supplied": false,
+      "value": null
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": null,
+      "calculation": null
+    },
+    "generated_by": "assessment_metadata/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.212275Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  },
+  {
+    "evidence_id": "evidence:f21b27ce23c3c68dd7990a81",
+    "evidence_type": "governance_metadata",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "governance metadata",
+    "value": {
+      "property": "steward",
+      "supplied": false,
+      "value": null
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": null,
+      "calculation": null
+    },
+    "generated_by": "assessment_metadata/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.212332Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  },
+  {
+    "evidence_id": "evidence:7026d2189af6b19c5e3cf7cf",
+    "evidence_type": "governance_metadata",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "governance metadata",
+    "value": {
+      "property": "authoritative_source",
+      "supplied": false,
+      "value": null
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": null,
+      "calculation": null
+    },
+    "generated_by": "assessment_metadata/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.212387Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  },
+  {
+    "evidence_id": "evidence:bad804492f05241a15f0bf72",
+    "evidence_type": "governance_metadata",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "governance metadata",
+    "value": {
+      "property": "source_system",
+      "supplied": false,
+      "value": null
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": null,
+      "calculation": null
+    },
+    "generated_by": "assessment_metadata/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.212429Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  },
+  {
+    "evidence_id": "evidence:bd40c5b1523aaafe42ccc7db",
+    "evidence_type": "governance_metadata",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "governance metadata",
+    "value": {
+      "property": "provenance",
+      "supplied": false,
+      "value": null
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": null,
+      "calculation": null
+    },
+    "generated_by": "assessment_metadata/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.212471Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  },
+  {
+    "evidence_id": "evidence:1e916eeebc0ff8f212f9fd03",
+    "evidence_type": "governance_metadata",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "governance metadata",
+    "value": {
+      "property": "lineage",
+      "supplied": false,
+      "value": null
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": null,
+      "calculation": null
+    },
+    "generated_by": "assessment_metadata/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.212511Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  },
+  {
+    "evidence_id": "evidence:aad7f6035568b437b42496c6",
+    "evidence_type": "governance_metadata",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "governance metadata",
+    "value": {
+      "property": "sensitivity",
+      "supplied": false,
+      "value": null
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": null,
+      "calculation": null
+    },
+    "generated_by": "assessment_metadata/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.212549Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  },
+  {
+    "evidence_id": "evidence:9dfd604551b9fc51cd3981a6",
+    "evidence_type": "governance_metadata",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "governance metadata",
+    "value": {
+      "property": "security_classification",
+      "supplied": false,
+      "value": null
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": null,
+      "calculation": null
+    },
+    "generated_by": "assessment_metadata/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.212591Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  },
+  {
+    "evidence_id": "evidence:a16201e58695fb75267c29ee",
+    "evidence_type": "governance_metadata",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "governance metadata",
+    "value": {
+      "property": "access_constraints",
+      "supplied": false,
+      "value": null
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": null,
+      "calculation": null
+    },
+    "generated_by": "assessment_metadata/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.212631Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  },
+  {
+    "evidence_id": "evidence:4e2350091176e0d7b15851f2",
+    "evidence_type": "governance_metadata",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "governance metadata",
+    "value": {
+      "property": "retention",
+      "supplied": false,
+      "value": null
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": null,
+      "calculation": null
+    },
+    "generated_by": "assessment_metadata/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.212673Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  },
+  {
+    "evidence_id": "evidence:2198f3250d85342dba0d016e",
+    "evidence_type": "governance_metadata",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "governance metadata",
+    "value": {
+      "property": "update_cadence",
+      "supplied": false,
+      "value": null
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": null,
+      "calculation": null
+    },
+    "generated_by": "assessment_metadata/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.212711Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  },
+  {
+    "evidence_id": "evidence:f2ad6bae188e205284ce853c",
+    "evidence_type": "governance_metadata",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "governance metadata",
+    "value": {
+      "property": "version",
+      "supplied": false,
+      "value": null
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": null,
+      "calculation": null
+    },
+    "generated_by": "assessment_metadata/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.212756Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  },
+  {
+    "evidence_id": "evidence:b036483e08687215ad245e52",
+    "evidence_type": "governance_metadata",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "governance metadata",
+    "value": {
+      "property": "licensing",
+      "supplied": false,
+      "value": null
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": null,
+      "calculation": null
+    },
+    "generated_by": "assessment_metadata/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.212795Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  },
+  {
+    "evidence_id": "evidence:063c18b17a44e4169d2d01ac",
+    "evidence_type": "governance_metadata",
+    "dataset_id": "dataset:aea046cab5baa7321637b0a6",
+    "field": null,
+    "description": "governance metadata",
+    "value": {
+      "property": "quality_accountability",
+      "supplied": false,
+      "value": null
+    },
+    "source_location": {
+      "workbook": "dirty_customers.xlsx",
+      "worksheet": "Customers",
+      "table": "region_1_1",
+      "column": null,
+      "row": null,
+      "cell_range": null,
+      "calculation": null
+    },
+    "generated_by": "assessment_metadata/0.1.1",
+    "timestamp": "2026-09-19T18:47:53.212832Z",
+    "state": "OBSERVED",
+    "scope": "metadata"
+  }
+]

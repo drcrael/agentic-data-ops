@@ -1,0 +1,10 @@
+{
+  "python": "3.14.7",
+  "platform": "Linux",
+  "source_rows": 100000,
+  "measured_rows": 10000,
+  "scope": "sample",
+  "elapsed_seconds": 0.312,
+  "peak_rss_mib": 98.44,
+  "outcome": "WAITING_FOR_HUMAN"
+}

@@ -1,0 +1,19 @@
+llm_enabled: false
+runtime:
+  output_directory: output
+  random_seed: 42
+security:
+  mode: local_only
+  allow_raw_data_to_remote_models: false
+  allow_metadata_to_remote_models: false
+profiling:
+  max_rows: 1000000
+  sample_rows: 10000
+  include_value_summaries: false
+llm_context:
+  include_samples: false
+  max_sample_rows: 20
+assessment_control:
+  max_iterations: 10
+  stop_on_no_change: true
+  require_human_for_authoritative_resolution: true

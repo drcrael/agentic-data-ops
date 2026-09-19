@@ -1,0 +1,17 @@
+# These expectations are supplied by the fixture owner, not inferred from a 'state' label.
+quality_rules:
+  - rule_id: customer_id_required
+    dataset: Customers
+    field: customer_id
+    dimension: completeness
+    operator: not_null
+    severity: critical
+    origin: USER_DEFINED
+  - rule_id: approved_fixture_states
+    dataset: Customers
+    field: state
+    dimension: validity
+    operator: enum
+    parameters:
+      values: [CA, NY]
+    origin: USER_DEFINED

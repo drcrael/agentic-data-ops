@@ -1,0 +1,25 @@
+# Replace YOUR_INSTALLED_MODEL with an Ollama model already installed on your machine.
+llm_enabled: true
+security:
+  mode: local_only
+  allow_raw_data_to_remote_models: false
+  allow_metadata_to_remote_models: false
+llm_context:
+  include_samples: false
+models:
+  semantic_inference:
+    provider: ollama
+    model: YOUR_INSTALLED_MODEL
+    base_url: http://127.0.0.1:11434
+  quality_reasoning:
+    provider: ollama
+    model: YOUR_INSTALLED_MODEL
+    base_url: http://127.0.0.1:11434
+  governance_reasoning:
+    provider: ollama
+    model: YOUR_INSTALLED_MODEL
+    base_url: http://127.0.0.1:11434
+  maturation_reasoning:
+    provider: ollama
+    model: YOUR_INSTALLED_MODEL
+    base_url: http://127.0.0.1:11434

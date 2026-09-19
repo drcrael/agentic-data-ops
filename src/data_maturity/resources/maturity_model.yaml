@@ -1,0 +1,169 @@
+version: '1'
+dimensions:
+  structure:
+    level_1:
+      requirements:
+      - stable_tabular_structure
+    level_2:
+      requirements:
+      - typed_fields
+    level_3:
+      requirements:
+      - authoritative_schema
+    level_4:
+      requirements:
+      - schema_validation_automated
+    level_5:
+      requirements:
+      - monitoring_operational
+  schema_definition:
+    level_1:
+      requirements:
+      - stable_tabular_structure
+    level_2:
+      requirements:
+      - typed_fields
+      - candidate_keys_identified
+      - field_definitions_present
+    level_3:
+      requirements:
+      - authoritative_schema
+      - constraints_defined
+    level_4:
+      requirements:
+      - schema_validation_automated
+      - schema_versioned
+    level_5:
+      requirements:
+      - machine_readable_contract
+      - semantic_definitions_machine_readable
+  data_quality:
+    level_1:
+      requirements:
+      - quality_measured
+    level_2:
+      requirements:
+      - no_high_quality_findings
+    level_3:
+      requirements:
+      - quality_controlled
+    level_4:
+      requirements:
+      - monitoring_operational
+    level_5:
+      requirements:
+      - ai_readiness_verified
+  semantic_clarity:
+    level_1:
+      requirements:
+      - metadata_recorded
+    level_2:
+      requirements:
+      - field_definitions_present
+    level_3:
+      requirements:
+      - semantics_resolved
+    level_4:
+      requirements:
+      - schema_versioned
+    level_5:
+      requirements:
+      - semantic_definitions_machine_readable
+  metadata:
+    level_1:
+      requirements:
+      - metadata_recorded
+    level_2:
+      requirements:
+      - field_definitions_present
+    level_3:
+      requirements:
+      - governance_defined
+    level_4:
+      requirements:
+      - schema_versioned
+    level_5:
+      requirements:
+      - semantic_definitions_machine_readable
+  provenance_lineage:
+    level_1:
+      requirements:
+      - metadata_recorded
+    level_2:
+      requirements:
+      - provenance_documented
+    level_3:
+      requirements:
+      - lineage_documented
+    level_4:
+      requirements:
+      - monitoring_operational
+    level_5:
+      requirements:
+      - ai_readiness_verified
+  governance:
+    level_1:
+      requirements:
+      - metadata_recorded
+    level_2:
+      requirements:
+      - owner_known
+    level_3:
+      requirements:
+      - governance_defined
+      - authority_known
+    level_4:
+      requirements:
+      - monitoring_operational
+    level_5:
+      requirements:
+      - ai_readiness_verified
+  machine_accessibility:
+    level_1:
+      requirements:
+      - machine_accessible
+    level_2:
+      requirements:
+      - typed_fields
+    level_3:
+      requirements:
+      - governance_defined
+    level_4:
+      requirements:
+      - schema_validation_automated
+    level_5:
+      requirements:
+      - ai_readiness_verified
+  data_contracts:
+    level_1:
+      requirements:
+      - machine_readable_contract
+    level_2:
+      requirements:
+      - constraints_defined
+    level_3:
+      requirements:
+      - contract_authoritative
+    level_4:
+      requirements:
+      - schema_versioned
+    level_5:
+      requirements:
+      - semantic_definitions_machine_readable
+  ai_readiness:
+    level_1:
+      requirements:
+      - machine_accessible
+    level_2:
+      requirements:
+      - semantics_resolved
+    level_3:
+      requirements:
+      - governance_defined
+    level_4:
+      requirements:
+      - quality_controlled
+      - monitoring_operational
+    level_5:
+      requirements:
+      - ai_readiness_verified
