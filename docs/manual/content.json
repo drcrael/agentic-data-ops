@@ -6,7 +6,7 @@
       {
         "type": "p",
         "args": [
-          "Agentic Data Ops contains <b>Data Maturity Agent 0.1.1</b>, a Python command-line application. It inspects spreadsheets and delimited files, measures data quality, identifies missing business knowledge, and produces an evidence-backed assessment plus a proposed data-product contract."
+          "Agentic Data Ops contains <b>Data Maturity Agent 0.1.2</b>, a Python command-line application. It inspects spreadsheets and delimited files, measures data quality, identifies missing business knowledge, and produces an evidence-backed assessment plus a proposed data-product contract."
         ]
       },
       {
@@ -1814,7 +1814,7 @@
   },
   {
     "title": "Command reference",
-    "subtitle": "Exact command and option availability in version 0.1.1",
+    "subtitle": "Exact command and option availability in version 0.1.2",
     "blocks": [
       {
         "type": "table",
@@ -1943,13 +1943,13 @@
       {
         "type": "p",
         "args": [
-          "Prepared 19 September 2026 for Data Maturity Agent <b>0.1.1</b>, release tag <b>v0.1.1</b>. Instructions were checked against the shipped CLI, configuration models, evaluators, controller, report writer and repository documentation."
+          "Prepared 19 September 2026 for Data Maturity Agent <b>0.1.2</b>, release tag <b>v0.1.2</b>. Instructions were checked against the shipped CLI, configuration models, evaluators, controller, report writer and repository documentation."
         ]
       },
       {
         "type": "small",
         "args": [
-          "<link href=\"https://github.com/drcrael/agentic-data-ops/tree/v0.1.1\" color=\"#007F83\">Versioned repository and README</link><br/><link href=\"https://github.com/drcrael/agentic-data-ops/blob/v0.1.1/VALIDATION.md\" color=\"#007F83\">Executed validation report</link> | <link href=\"https://github.com/drcrael/agentic-data-ops/blob/v0.1.1/LIMITATIONS.md\" color=\"#007F83\">MVP limitations</link><br/><link href=\"https://github.com/drcrael/agentic-data-ops/blob/v0.1.1/docs/control-loop.md\" color=\"#007F83\">Assessment control loop</link> | <link href=\"https://github.com/drcrael/agentic-data-ops/blob/v0.1.1/SECURITY.md\" color=\"#007F83\">Security model</link>"
+          "<link href=\"https://github.com/drcrael/agentic-data-ops/tree/v0.1.2\" color=\"#007F83\">Versioned repository and README</link><br/><link href=\"https://github.com/drcrael/agentic-data-ops/blob/v0.1.2/VALIDATION.md\" color=\"#007F83\">Executed validation report</link> | <link href=\"https://github.com/drcrael/agentic-data-ops/blob/v0.1.2/LIMITATIONS.md\" color=\"#007F83\">MVP limitations</link><br/><link href=\"https://github.com/drcrael/agentic-data-ops/blob/v0.1.2/docs/control-loop.md\" color=\"#007F83\">Assessment control loop</link> | <link href=\"https://github.com/drcrael/agentic-data-ops/blob/v0.1.2/SECURITY.md\" color=\"#007F83\">Security model</link>"
         ]
       },
       {

@@ -6,6 +6,7 @@ from importlib.resources import files
 from pathlib import Path
 from typing import cast
 
+from data_maturity import __version__
 from data_maturity.agents.orchestrator import AssessmentOrchestrator
 from data_maturity.config import Config
 from data_maturity.control.comparison import compare
@@ -41,6 +42,24 @@ STAGES = [
     "recommendations",
     "contract",
 ]
+
+FINGERPRINT_FORMAT = "canonical-json-v2"
+
+
+def structured_fingerprints(config: Config, resolutions: list[Resolution]) -> dict[str, str]:
+    """Inputs containing nested models; also used to compare legacy saved histories."""
+    return {
+        "quality_rules": digest(config.quality_rules),
+        "resolutions": digest(resolutions),
+        "models": digest(
+            {
+                "models": config.models,
+                "enabled": config.llm_enabled,
+                "context": config.llm_context,
+                "security": config.security,
+            }
+        ),
+    }
 
 
 def decide(workbook: WorkbookAssessment) -> ControlDecision:
@@ -103,23 +122,17 @@ class AssessmentController:
             for p in files("data_maturity.prompts").iterdir()
             if p.name.endswith(".txt")
         }
+        structured = structured_fingerprints(self.config, resolutions)
         return {
             "source": file_hash(source),
             "profiling": digest(self.config.profiling),
             "sampling_seed": digest(self.config.runtime.random_seed),
-            "quality_rules": digest(self.config.quality_rules),
+            "quality_rules": structured["quality_rules"],
             "maturity_model": digest(self.config.maturity_model),
             "mission": digest(mission),
-            "resolutions": digest(resolutions),
+            "resolutions": structured["resolutions"],
             "governance": digest(self.config.governance_metadata),
-            "models": digest(
-                {
-                    "models": self.config.models,
-                    "enabled": self.config.llm_enabled,
-                    "context": self.config.llm_context,
-                    "security": self.config.security,
-                }
-            ),
+            "models": structured["models"],
             "prompts": digest(prompts),
         }
 
@@ -154,8 +167,20 @@ class AssessmentController:
         if mission_context is None and previous:
             mission_context = previous.mission_context
         fingerprints = self.fingerprints(source, mission_context, all_resolutions)
+        previous_inputs = dict(previous.fingerprints) if previous else {}
+        if previous and previous_inputs.get("fingerprint_format") != FINGERPRINT_FORMAT:
+            # Compare persisted input values using the new encoding, without rewriting
+            # historical snapshots or their baseline hashes. Keep stored source/prompt
+            # hashes so real external changes still invalidate the appropriate stages.
+            legacy_inputs = structured_fingerprints(
+                Config.model_validate(previous.configuration), previous_resolutions
+            )
+            if not previous_run:
+                # A standalone assessment cannot recover its prior resolution ledger.
+                legacy_inputs.pop("resolutions")
+            previous_inputs.update(legacy_inputs)
         changed = [
-            k for k, v in fingerprints.items() if not previous or previous.fingerprints.get(k) != v
+            k for k, v in fingerprints.items() if not previous or previous_inputs.get(k) != v
         ]
         iterations = list(previous_run.iterations) if previous_run else []
         number = len(iterations) + 1
@@ -239,8 +264,10 @@ class AssessmentController:
                 )
                 if s not in executed
             )
+        workbook.application_version = __version__
         workbook.fingerprints = {
             **fingerprints,
+            "fingerprint_format": FINGERPRINT_FORMAT,
             "dataset_fingerprints": digest([(d.dataset_id, d.profile) for d in workbook.datasets]),
             "schema": digest([d.physical_schema for d in workbook.datasets]),
             "contract": digest([d.proposed_contract for d in workbook.datasets]),

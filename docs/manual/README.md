@@ -2,8 +2,8 @@
 
 [Read the user manual (PDF)](../Agentic_Data_Ops_User_Manual.pdf).
 
-The 30-page manual documents Data Maturity Agent 0.1.1 for release tag
-`v0.1.1`, prepared 19 September 2026.
+The 30-page manual documents Data Maturity Agent 0.1.2 for release tag
+`v0.1.2`, prepared 19 September 2026.
 The committed PDF is the reviewed release manual. Its content uses synthetic examples.
 
 ## Editable source

@@ -17,9 +17,14 @@ def now() -> datetime:
 
 
 def primitive(value: Any) -> Any:
+    def encode(item: Any) -> Any:
+        # json's default hook is also called for models nested in containers.
+        # Their repr is not stable across JSON reloads (notably tzinfo objects).
+        return item.model_dump(mode="json") if isinstance(item, BaseModel) else str(item)
+
     if isinstance(value, BaseModel):
         return value.model_dump(mode="json")
-    return json.loads(json.dumps(value, default=str, allow_nan=False))
+    return json.loads(json.dumps(value, default=encode, allow_nan=False))
 
 
 def digest(value: Any) -> str:

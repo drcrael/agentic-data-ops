@@ -1,10 +1,10 @@
 {
-  "application_version": "0.1.1",
-  "assessment_id": "assessment:eb551f55094776a84ab31df1",
-  "started_at": "2026-09-19T18:47:53.170400+00:00",
-  "completed_at": "2026-09-19 18:47:53.217049+00:00",
+  "application_version": "0.1.2",
+  "assessment_id": "assessment:b1a3e6282dd193ecf194ef2a",
+  "started_at": "2026-09-19T19:10:47.346672+00:00",
+  "completed_at": "2026-09-19 19:10:47.391557+00:00",
   "source_file": "dirty_customers.xlsx",
-  "source_sha256": "d9ac77da7beeff5fe4a1ff8f923837be9772e0f2d56bb7dd959678e4bee4c25e",
+  "source_sha256": "b9e01f478f54a884b8662d26f091e25533548866068a2521573c7eaf77694289",
   "configuration_hash": "9a1d81f221e097061eed24019e2845614fc9959466ea12629865ab7744556d89",
   "quality_rules_version": "1",
   "maturity_model_version": "1",
@@ -73,14 +73,14 @@
     }
   ],
   "artifact_sha256": {
-    "assessment.json": "180641cbe677543fca880c53a16f5503a61b24723847826b188b466743439501",
-    "schema.json": "4b738a109d18b8f9c39247f0bdc9aaabfae7f6f11a0ac790e1d5580a1b918758",
-    "quality_report.json": "a442610430378a85e510e1b3bc111eb0713d14cbbd76cc3a736f0ee1b30b1963",
-    "evidence.json": "eeecdb41d77e093ef19507040c4f91dc52d06a65c92e673b55239e46be28f2c0",
-    "evidence_graph.json": "c3a02e6fc6e2f6338f0b2457917cf080099c07fe4d7eedab5a276c2b5969d10d",
-    "assessment_history.json": "31af07eaecc5379f8103f5b8df2e7b7b9f818c822ffbde3d6a59e388610a27fd",
-    "data_contract.yaml": "52bf628130c16e90370294f042d20dc50c0e14bbed5543cafb8e6bafbe16abca",
+    "assessment.json": "44978d54a21f44bdd066034d7d4329e6d96c587d9149f2a2ffa9e798bb767860",
+    "schema.json": "0225c5ed943669439f97e9b1efe9abc3c31ba8e3064ec0d61631888cc0e65d86",
+    "quality_report.json": "e020b6e5008b1aad0702863dcc39b838632522843e24583ba9e53208f09f4c0d",
+    "evidence.json": "fe873ef330ea180871f15d61e26650f90f34d26535d8d03ddce3193a6d9d2e1c",
+    "evidence_graph.json": "024d312dc41635b1855ee304e8de2f677370f01b94f2d27dec3c8cff2c1fd222",
+    "assessment_history.json": "1be074c1349668e51b3f49d6136090ae71b7fa553891120fc6fd41a163c75a37",
+    "data_contract.yaml": "2d5fe89268ea91b54260506e6582a3990eb3ac6d6556b40c82db8d1ce41cd01e",
     "sme_questions.md": "782d005fc7ea6c9eb0d5005817d91111ba8698eba04471c859071c08877e4dc5",
-    "maturity_report.md": "8c5fe0e40a1e1797c372779faa4a780528f67548418fc45e46189e7e662f734f"
+    "maturity_report.md": "1a6193ae25de52fbec634486b7d980dd42339be14f0e6851a622d9b525a0a325"
   }
 }

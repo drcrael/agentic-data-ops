@@ -13,11 +13,13 @@ Validation date: 2026-09-19. Environment: Linux, CPython 3.14.7. These are obser
 
 ## Automated tests
 
-- **95 passed, 0 failed**.
-- **95.21% total line coverage** (2,486 executable statements; 119 not executed).
-- Security-only invocation: **19 passed, 76 deselected**.
+- **111 passed, 0 failed**.
+- **95.52% total line coverage** (2,500 executable statements; 112 not executed).
+- Security-only invocation: **19 passed, 92 deselected**.
 - Test markers: unit, integration, acceptance, security, regression, performance.
 - External network connections are blocked in the test process. Models use deterministic mocks/controlled HTTP transports.
+
+Sixteen fingerprint/history regression cases cover nested models, timezone round trips, mapping order, scalar type distinctions, non-finite rejection, persistent CLI processes, legacy baselines, real input changes and risk expiry.
 
 Two manufacturing-specific integration tests verify that authoritative units/frame answers improve the mapped requirements while other human gates remain open, and that a missing part ID causes mission-fitness regression.
 
@@ -53,8 +55,8 @@ Generated, sanitized report artifacts from the dirty fixture are retained in `ex
 - Source: 100,000 CSV rows.
 - Retained/assessed: 10,000 rows.
 - Scope: explicitly `sample`.
-- Elapsed assessment time: **0.312 seconds**.
-- Peak process RSS: **98.44 MiB**.
+- Elapsed assessment time: **0.314 seconds**.
+- Peak process RSS: **103.25 MiB**.
 
 The raw measurement is in `docs/benchmark.json`. Hardware and dependency versions affect performance; these measurements are not a production SLA.
 

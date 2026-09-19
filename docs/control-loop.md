@@ -37,3 +37,16 @@ Supported resolution types include SME_ANSWER, DATA_OWNER_DECISION, GOVERNANCE_D
 Risk acceptance requires authority/rationale/scope/review date. Expiry reopens applicable questions/findings. Authoritative answers cannot erase deterministic defects; correct the data, change an explicit rule, or accept risk through the dedicated lifecycle operation.
 
 Snapshots preserve evidence and findings across source changes. Baseline names cannot be reused; their hashes must match stored snapshots before comparison. Comparison is dimensional, never one aggregate score. Authoritative resolutions on old source content remain in history but must be reconfirmed after source changes.
+
+## Saved-history fingerprint compatibility
+
+Nested domain models are encoded as canonical JSON when computing fingerprints;
+Python object representations are never used for nested models. Saving and reloading
+unchanged resolution history therefore does not create an SME response event.
+
+Histories without the `canonical-json-v2` fingerprint marker are compared using
+canonical fingerprints reconstructed from their saved rule/model configuration and
+resolution ledger. Historical snapshots and named-baseline hashes are not rewritten.
+Stored source and prompt fingerprints remain authoritative for change detection.
+A standalone assessment without its resolution ledger cannot recover that missing
+history; retain `assessment_history.json` for complete incremental reassessment.

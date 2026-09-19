@@ -41,7 +41,7 @@ class EvidenceStore:
                 cell_range=dataset.structure.cell_range,
                 calculation=kind,
             ),
-            generated_by="deterministic/0.1.1",
+            generated_by="deterministic/0.1.2",
             scope=scope,
         )
         self.items.setdefault(identifier, evidence)

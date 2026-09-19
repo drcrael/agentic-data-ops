@@ -4,7 +4,7 @@
   "source_rows": 100000,
   "measured_rows": 10000,
   "scope": "sample",
-  "elapsed_seconds": 0.312,
-  "peak_rss_mib": 98.44,
+  "elapsed_seconds": 0.314,
+  "peak_rss_mib": 103.25,
   "outcome": "WAITING_FOR_HUMAN"
 }

@@ -30,72 +30,72 @@ Findings distinguish OBSERVED measurements, INFERRED interpretations, and UNRESO
 
 ### Customers
 
-- uniqueness/duplicate\_records: 1 (FAIL, full); evidence evidence:490393998160a489a29185bf.
-- completeness/missing\_identifier: 1 (WARNING, full); evidence evidence:4cef4b91ea4a05b2e1afb18a.
-- uniqueness/duplicate\_candidate\_identifier: 1 (WARNING, full); evidence evidence:4cef4b91ea4a05b2e1afb18a.
-- conformity/whitespace\_inconsistency: 0 (PASS, full); evidence evidence:4cef4b91ea4a05b2e1afb18a.
-- consistency/casing\_inconsistency: 0 (PASS, full); evidence evidence:4cef4b91ea4a05b2e1afb18a.
-- validity/invalid\_or\_ambiguous\_dates: 0 (PASS, full); evidence evidence:4cef4b91ea4a05b2e1afb18a.
-- consistency/mixed\_physical\_types: 1 (FAIL, full); evidence evidence:4cef4b91ea4a05b2e1afb18a.
-- validity/nonfinite\_values: 0 (PASS, full); evidence evidence:4cef4b91ea4a05b2e1afb18a.
-- accuracy_proxies/potential\_anomaly\_iqr: 0 (PASS, full); evidence evidence:4cef4b91ea4a05b2e1afb18a.
-- accuracy_proxies/potential\_anomaly\_mad: 0 (PASS, full); evidence evidence:4cef4b91ea4a05b2e1afb18a.
-- accuracy_proxies/potential\_anomaly\_length\_iqr: 0 (PASS, full); evidence evidence:4cef4b91ea4a05b2e1afb18a.
-- accuracy_proxies/potential\_anomaly\_rare\_categories: 0 (PASS, full); evidence evidence:4cef4b91ea4a05b2e1afb18a.
-- completeness/missing\_values: 0 (PASS, full); evidence evidence:a6e218fc3935394674fe4c11.
-- conformity/whitespace\_inconsistency: 1 (FAIL, full); evidence evidence:a6e218fc3935394674fe4c11.
-- consistency/casing\_inconsistency: 0 (PASS, full); evidence evidence:a6e218fc3935394674fe4c11.
-- validity/invalid\_or\_ambiguous\_dates: 0 (PASS, full); evidence evidence:a6e218fc3935394674fe4c11.
-- consistency/mixed\_physical\_types: 0 (PASS, full); evidence evidence:a6e218fc3935394674fe4c11.
-- validity/nonfinite\_values: 0 (PASS, full); evidence evidence:a6e218fc3935394674fe4c11.
-- accuracy_proxies/potential\_anomaly\_length\_iqr: 1 (WARNING, full); evidence evidence:a6e218fc3935394674fe4c11.
-- accuracy_proxies/potential\_anomaly\_rare\_categories: 0 (PASS, full); evidence evidence:a6e218fc3935394674fe4c11.
-- completeness/missing\_values: 0 (PASS, full); evidence evidence:5251f836c1f901de2055c575.
-- conformity/whitespace\_inconsistency: 0 (PASS, full); evidence evidence:5251f836c1f901de2055c575.
-- consistency/casing\_inconsistency: 4 (FAIL, full); evidence evidence:5251f836c1f901de2055c575.
-- validity/invalid\_or\_ambiguous\_dates: 0 (PASS, full); evidence evidence:5251f836c1f901de2055c575.
-- consistency/mixed\_physical\_types: 0 (PASS, full); evidence evidence:5251f836c1f901de2055c575.
-- validity/nonfinite\_values: 0 (PASS, full); evidence evidence:5251f836c1f901de2055c575.
-- accuracy_proxies/potential\_anomaly\_length\_iqr: 0 (PASS, full); evidence evidence:5251f836c1f901de2055c575.
-- accuracy_proxies/potential\_anomaly\_rare\_categories: 0 (PASS, full); evidence evidence:5251f836c1f901de2055c575.
-- completeness/missing\_values: 0 (PASS, full); evidence evidence:efd675a6196ddd2a8d50c782.
-- conformity/whitespace\_inconsistency: 1 (FAIL, full); evidence evidence:efd675a6196ddd2a8d50c782.
-- consistency/casing\_inconsistency: 4 (FAIL, full); evidence evidence:efd675a6196ddd2a8d50c782.
-- validity/invalid\_or\_ambiguous\_dates: 0 (PASS, full); evidence evidence:efd675a6196ddd2a8d50c782.
-- consistency/mixed\_physical\_types: 0 (PASS, full); evidence evidence:efd675a6196ddd2a8d50c782.
-- validity/nonfinite\_values: 0 (PASS, full); evidence evidence:efd675a6196ddd2a8d50c782.
-- accuracy_proxies/potential\_anomaly\_length\_iqr: 1 (WARNING, full); evidence evidence:efd675a6196ddd2a8d50c782.
-- accuracy_proxies/potential\_anomaly\_rare\_categories: 0 (PASS, full); evidence evidence:efd675a6196ddd2a8d50c782.
-- completeness/missing\_values: 0 (PASS, full); evidence evidence:650afac3e7f09c78af73b89d.
-- conformity/whitespace\_inconsistency: 0 (PASS, full); evidence evidence:650afac3e7f09c78af73b89d.
-- consistency/casing\_inconsistency: 0 (PASS, full); evidence evidence:650afac3e7f09c78af73b89d.
-- validity/invalid\_or\_ambiguous\_dates: 3 (WARNING, full); evidence evidence:650afac3e7f09c78af73b89d.
-- consistency/mixed\_physical\_types: 3 (FAIL, full); evidence evidence:650afac3e7f09c78af73b89d.
-- validity/nonfinite\_values: 0 (PASS, full); evidence evidence:650afac3e7f09c78af73b89d.
-- accuracy_proxies/potential\_anomaly\_length\_iqr: 0 (PASS, full); evidence evidence:650afac3e7f09c78af73b89d.
-- accuracy_proxies/potential\_anomaly\_rare\_categories: 0 (PASS, full); evidence evidence:650afac3e7f09c78af73b89d.
-- integrity/integrity\_unresolved: UNDETERMINED (UNDETERMINED, metadata); evidence evidence:17654c2cf035209d9d012c9c.
-- timeliness/timeliness\_unresolved: UNDETERMINED (UNDETERMINED, metadata); evidence evidence:17654c2cf035209d9d012c9c.
-- semantic_clarity/semantic\_clarity\_unresolved: UNDETERMINED (UNDETERMINED, metadata); evidence evidence:17654c2cf035209d9d012c9c.
-- provenance/provenance\_unresolved: UNDETERMINED (UNDETERMINED, metadata); evidence evidence:17654c2cf035209d9d012c9c.
-- governance/governance\_unresolved: UNDETERMINED (UNDETERMINED, metadata); evidence evidence:17654c2cf035209d9d012c9c.
+- uniqueness/duplicate\_records: 1 (FAIL, full); evidence evidence:f2cdcda37101ead4d3c0e69c.
+- completeness/missing\_identifier: 1 (WARNING, full); evidence evidence:3dbfb6238b57b1c535fcf2e3.
+- uniqueness/duplicate\_candidate\_identifier: 1 (WARNING, full); evidence evidence:3dbfb6238b57b1c535fcf2e3.
+- conformity/whitespace\_inconsistency: 0 (PASS, full); evidence evidence:3dbfb6238b57b1c535fcf2e3.
+- consistency/casing\_inconsistency: 0 (PASS, full); evidence evidence:3dbfb6238b57b1c535fcf2e3.
+- validity/invalid\_or\_ambiguous\_dates: 0 (PASS, full); evidence evidence:3dbfb6238b57b1c535fcf2e3.
+- consistency/mixed\_physical\_types: 1 (FAIL, full); evidence evidence:3dbfb6238b57b1c535fcf2e3.
+- validity/nonfinite\_values: 0 (PASS, full); evidence evidence:3dbfb6238b57b1c535fcf2e3.
+- accuracy_proxies/potential\_anomaly\_iqr: 0 (PASS, full); evidence evidence:3dbfb6238b57b1c535fcf2e3.
+- accuracy_proxies/potential\_anomaly\_mad: 0 (PASS, full); evidence evidence:3dbfb6238b57b1c535fcf2e3.
+- accuracy_proxies/potential\_anomaly\_length\_iqr: 0 (PASS, full); evidence evidence:3dbfb6238b57b1c535fcf2e3.
+- accuracy_proxies/potential\_anomaly\_rare\_categories: 0 (PASS, full); evidence evidence:3dbfb6238b57b1c535fcf2e3.
+- completeness/missing\_values: 0 (PASS, full); evidence evidence:9053252796c047b3a919ea72.
+- conformity/whitespace\_inconsistency: 1 (FAIL, full); evidence evidence:9053252796c047b3a919ea72.
+- consistency/casing\_inconsistency: 0 (PASS, full); evidence evidence:9053252796c047b3a919ea72.
+- validity/invalid\_or\_ambiguous\_dates: 0 (PASS, full); evidence evidence:9053252796c047b3a919ea72.
+- consistency/mixed\_physical\_types: 0 (PASS, full); evidence evidence:9053252796c047b3a919ea72.
+- validity/nonfinite\_values: 0 (PASS, full); evidence evidence:9053252796c047b3a919ea72.
+- accuracy_proxies/potential\_anomaly\_length\_iqr: 1 (WARNING, full); evidence evidence:9053252796c047b3a919ea72.
+- accuracy_proxies/potential\_anomaly\_rare\_categories: 0 (PASS, full); evidence evidence:9053252796c047b3a919ea72.
+- completeness/missing\_values: 0 (PASS, full); evidence evidence:c10382eed0087052de6d28a7.
+- conformity/whitespace\_inconsistency: 0 (PASS, full); evidence evidence:c10382eed0087052de6d28a7.
+- consistency/casing\_inconsistency: 4 (FAIL, full); evidence evidence:c10382eed0087052de6d28a7.
+- validity/invalid\_or\_ambiguous\_dates: 0 (PASS, full); evidence evidence:c10382eed0087052de6d28a7.
+- consistency/mixed\_physical\_types: 0 (PASS, full); evidence evidence:c10382eed0087052de6d28a7.
+- validity/nonfinite\_values: 0 (PASS, full); evidence evidence:c10382eed0087052de6d28a7.
+- accuracy_proxies/potential\_anomaly\_length\_iqr: 0 (PASS, full); evidence evidence:c10382eed0087052de6d28a7.
+- accuracy_proxies/potential\_anomaly\_rare\_categories: 0 (PASS, full); evidence evidence:c10382eed0087052de6d28a7.
+- completeness/missing\_values: 0 (PASS, full); evidence evidence:0762a99e348ef5663fdf9d2b.
+- conformity/whitespace\_inconsistency: 1 (FAIL, full); evidence evidence:0762a99e348ef5663fdf9d2b.
+- consistency/casing\_inconsistency: 4 (FAIL, full); evidence evidence:0762a99e348ef5663fdf9d2b.
+- validity/invalid\_or\_ambiguous\_dates: 0 (PASS, full); evidence evidence:0762a99e348ef5663fdf9d2b.
+- consistency/mixed\_physical\_types: 0 (PASS, full); evidence evidence:0762a99e348ef5663fdf9d2b.
+- validity/nonfinite\_values: 0 (PASS, full); evidence evidence:0762a99e348ef5663fdf9d2b.
+- accuracy_proxies/potential\_anomaly\_length\_iqr: 1 (WARNING, full); evidence evidence:0762a99e348ef5663fdf9d2b.
+- accuracy_proxies/potential\_anomaly\_rare\_categories: 0 (PASS, full); evidence evidence:0762a99e348ef5663fdf9d2b.
+- completeness/missing\_values: 0 (PASS, full); evidence evidence:beabe145cfc8fcb7b6939ddd.
+- conformity/whitespace\_inconsistency: 0 (PASS, full); evidence evidence:beabe145cfc8fcb7b6939ddd.
+- consistency/casing\_inconsistency: 0 (PASS, full); evidence evidence:beabe145cfc8fcb7b6939ddd.
+- validity/invalid\_or\_ambiguous\_dates: 3 (WARNING, full); evidence evidence:beabe145cfc8fcb7b6939ddd.
+- consistency/mixed\_physical\_types: 3 (FAIL, full); evidence evidence:beabe145cfc8fcb7b6939ddd.
+- validity/nonfinite\_values: 0 (PASS, full); evidence evidence:beabe145cfc8fcb7b6939ddd.
+- accuracy_proxies/potential\_anomaly\_length\_iqr: 0 (PASS, full); evidence evidence:beabe145cfc8fcb7b6939ddd.
+- accuracy_proxies/potential\_anomaly\_rare\_categories: 0 (PASS, full); evidence evidence:beabe145cfc8fcb7b6939ddd.
+- integrity/integrity\_unresolved: UNDETERMINED (UNDETERMINED, metadata); evidence evidence:70e850ba0121b7494be29522.
+- timeliness/timeliness\_unresolved: UNDETERMINED (UNDETERMINED, metadata); evidence evidence:70e850ba0121b7494be29522.
+- semantic_clarity/semantic\_clarity\_unresolved: UNDETERMINED (UNDETERMINED, metadata); evidence evidence:70e850ba0121b7494be29522.
+- provenance/provenance\_unresolved: UNDETERMINED (UNDETERMINED, metadata); evidence evidence:70e850ba0121b7494be29522.
+- governance/governance\_unresolved: UNDETERMINED (UNDETERMINED, metadata); evidence evidence:70e850ba0121b7494be29522.
 
 ## Semantic Assessment
 
 ### Customers
 
-- **INFERRED** customer\_id likely represents identifier; evidence evidence:4cef4b91ea4a05b2e1afb18a.
-- **UNRESOLVED** definition cannot be established from supplied evidence; evidence evidence:4cef4b91ea4a05b2e1afb18a.
-- **INFERRED** customer\_name likely represents name; evidence evidence:a6e218fc3935394674fe4c11.
-- **UNRESOLVED** definition cannot be established from supplied evidence; evidence evidence:a6e218fc3935394674fe4c11.
-- **INFERRED** state likely represents category; evidence evidence:5251f836c1f901de2055c575.
-- **UNRESOLVED** definition cannot be established from supplied evidence; evidence evidence:5251f836c1f901de2055c575.
-- **INFERRED** status likely represents status; evidence evidence:efd675a6196ddd2a8d50c782.
-- **UNRESOLVED** definition cannot be established from supplied evidence; evidence evidence:efd675a6196ddd2a8d50c782.
-- **UNRESOLVED** code definitions cannot be established from supplied evidence; evidence evidence:efd675a6196ddd2a8d50c782.
-- **INFERRED** created\_at likely represents timestamp; evidence evidence:650afac3e7f09c78af73b89d.
-- **UNRESOLVED** definition cannot be established from supplied evidence; evidence evidence:650afac3e7f09c78af73b89d.
-- **UNRESOLVED** temporal semantics cannot be established from supplied evidence; evidence evidence:650afac3e7f09c78af73b89d.
+- **INFERRED** customer\_id likely represents identifier; evidence evidence:3dbfb6238b57b1c535fcf2e3.
+- **UNRESOLVED** definition cannot be established from supplied evidence; evidence evidence:3dbfb6238b57b1c535fcf2e3.
+- **INFERRED** customer\_name likely represents name; evidence evidence:9053252796c047b3a919ea72.
+- **UNRESOLVED** definition cannot be established from supplied evidence; evidence evidence:9053252796c047b3a919ea72.
+- **INFERRED** state likely represents category; evidence evidence:c10382eed0087052de6d28a7.
+- **UNRESOLVED** definition cannot be established from supplied evidence; evidence evidence:c10382eed0087052de6d28a7.
+- **INFERRED** status likely represents status; evidence evidence:0762a99e348ef5663fdf9d2b.
+- **UNRESOLVED** definition cannot be established from supplied evidence; evidence evidence:0762a99e348ef5663fdf9d2b.
+- **UNRESOLVED** code definitions cannot be established from supplied evidence; evidence evidence:0762a99e348ef5663fdf9d2b.
+- **INFERRED** created\_at likely represents timestamp; evidence evidence:beabe145cfc8fcb7b6939ddd.
+- **UNRESOLVED** definition cannot be established from supplied evidence; evidence evidence:beabe145cfc8fcb7b6939ddd.
+- **UNRESOLVED** temporal semantics cannot be established from supplied evidence; evidence evidence:beabe145cfc8fcb7b6939ddd.
 
 ## Relationships
 
@@ -106,20 +106,20 @@ Findings distinguish OBSERVED measurements, INFERRED interpretations, and UNRESO
 
 ### Customers
 
-- owner: UNRESOLVED; evidence evidence:bc0d37eb228904982415210a.
-- steward: UNRESOLVED; evidence evidence:f21b27ce23c3c68dd7990a81.
-- authoritative_source: UNRESOLVED; evidence evidence:7026d2189af6b19c5e3cf7cf.
-- source_system: UNRESOLVED; evidence evidence:bad804492f05241a15f0bf72.
-- provenance: UNRESOLVED; evidence evidence:bd40c5b1523aaafe42ccc7db.
-- lineage: UNRESOLVED; evidence evidence:1e916eeebc0ff8f212f9fd03.
-- sensitivity: UNRESOLVED; evidence evidence:aad7f6035568b437b42496c6.
-- security_classification: UNRESOLVED; evidence evidence:9dfd604551b9fc51cd3981a6.
-- access_constraints: UNRESOLVED; evidence evidence:a16201e58695fb75267c29ee.
-- retention: UNRESOLVED; evidence evidence:4e2350091176e0d7b15851f2.
-- update_cadence: UNRESOLVED; evidence evidence:2198f3250d85342dba0d016e.
-- version: UNRESOLVED; evidence evidence:f2ad6bae188e205284ce853c.
-- licensing: UNRESOLVED; evidence evidence:b036483e08687215ad245e52.
-- quality_accountability: UNRESOLVED; evidence evidence:063c18b17a44e4169d2d01ac.
+- owner: UNRESOLVED; evidence evidence:f79dcb311b2369bf3e158905.
+- steward: UNRESOLVED; evidence evidence:0c50fda449a7ca0912ce4910.
+- authoritative_source: UNRESOLVED; evidence evidence:87d967c7d25a64ac28cc804b.
+- source_system: UNRESOLVED; evidence evidence:6da56839e1b9e566ac970f88.
+- provenance: UNRESOLVED; evidence evidence:756d0fefb1cced68e118b8a1.
+- lineage: UNRESOLVED; evidence evidence:e75f22880dca5bff3eff0b0f.
+- sensitivity: UNRESOLVED; evidence evidence:80dbc52b4ea54283fc53bf7a.
+- security_classification: UNRESOLVED; evidence evidence:e5fd2dcd1bd4654f636515fd.
+- access_constraints: UNRESOLVED; evidence evidence:34b33d80813283a52a6803a2.
+- retention: UNRESOLVED; evidence evidence:f8af6e9792d27b7198f8cd0a.
+- update_cadence: UNRESOLVED; evidence evidence:0619fc186b616aa5aae0cdaa.
+- version: UNRESOLVED; evidence evidence:2da75764975ff8623f11b74d.
+- licensing: UNRESOLVED; evidence evidence:da8878588e842bfd00d87547.
+- quality_accountability: UNRESOLVED; evidence evidence:0c51d44daff02618bd5aab3f.
 
 ## AI Readiness
 
@@ -157,21 +157,21 @@ Findings distinguish OBSERVED measurements, INFERRED interpretations, and UNRESO
 
 ### Customers
 
-- finding:fd499fd5fc242e90f09d1379: [high/OBSERVED/OPEN] duplicate records in measured scope; review source evidence. Evidence: evidence:490393998160a489a29185bf.
-- finding:850bce205d0d29a326d3c637: [high/INFERRED/OPEN] missing identifier in measured scope; review source evidence. Evidence: evidence:4cef4b91ea4a05b2e1afb18a.
-- finding:519536cac6d39dbbd493afb3: [high/INFERRED/OPEN] duplicate candidate identifier in measured scope; review source evidence. Evidence: evidence:4cef4b91ea4a05b2e1afb18a.
-- finding:b87bc9df10bf12ab65b106a8: [high/OBSERVED/OPEN] mixed physical types in measured scope; review source evidence. Evidence: evidence:4cef4b91ea4a05b2e1afb18a.
-- finding:59bf15dddabcf27efb2af5eb: [high/OBSERVED/OPEN] whitespace inconsistency in measured scope; review source evidence. Evidence: evidence:a6e218fc3935394674fe4c11.
-- finding:439905cc3e3b800959366b89: [high/OBSERVED/OPEN] casing inconsistency in measured scope; review source evidence. Evidence: evidence:5251f836c1f901de2055c575.
-- finding:7940d984f4ccec0120df2c72: [high/OBSERVED/OPEN] whitespace inconsistency in measured scope; review source evidence. Evidence: evidence:efd675a6196ddd2a8d50c782.
-- finding:90f4c807b44497e68e9b7359: [high/OBSERVED/OPEN] casing inconsistency in measured scope; review source evidence. Evidence: evidence:efd675a6196ddd2a8d50c782.
-- finding:a1cd355b99256fa77f0074cc: [high/INFERRED/OPEN] invalid or ambiguous dates in measured scope; review source evidence. Evidence: evidence:650afac3e7f09c78af73b89d.
-- finding:78209f737241b4f63d907144: [high/OBSERVED/OPEN] mixed physical types in measured scope; review source evidence. Evidence: evidence:650afac3e7f09c78af73b89d.
-- finding:8eb0556b69812d0729b34ca0: [high/UNRESOLVED/OPEN] code definitions cannot be established from supplied evidence Evidence: evidence:efd675a6196ddd2a8d50c782.
-- finding:78b6a75cc0ef561e07c1ccc7: [high/UNRESOLVED/OPEN] temporal semantics cannot be established from supplied evidence Evidence: evidence:650afac3e7f09c78af73b89d.
-- finding:5725d06e94f7d0d3ef6b3d56: [high/UNRESOLVED/OPEN] governance owner cannot be established from supplied evidence Evidence: evidence:bc0d37eb228904982415210a.
-- finding:b799423fd9b083b7e3809a51: [high/UNRESOLVED/OPEN] governance authoritative source cannot be established from supplied evidence Evidence: evidence:7026d2189af6b19c5e3cf7cf.
-- finding:33f4f57b73a91ff220d3f950: [high/UNRESOLVED/OPEN] governance security classification cannot be established from supplied evidence Evidence: evidence:9dfd604551b9fc51cd3981a6.
+- finding:fd499fd5fc242e90f09d1379: [high/OBSERVED/OPEN] duplicate records in measured scope; review source evidence. Evidence: evidence:f2cdcda37101ead4d3c0e69c.
+- finding:850bce205d0d29a326d3c637: [high/INFERRED/OPEN] missing identifier in measured scope; review source evidence. Evidence: evidence:3dbfb6238b57b1c535fcf2e3.
+- finding:519536cac6d39dbbd493afb3: [high/INFERRED/OPEN] duplicate candidate identifier in measured scope; review source evidence. Evidence: evidence:3dbfb6238b57b1c535fcf2e3.
+- finding:b87bc9df10bf12ab65b106a8: [high/OBSERVED/OPEN] mixed physical types in measured scope; review source evidence. Evidence: evidence:3dbfb6238b57b1c535fcf2e3.
+- finding:59bf15dddabcf27efb2af5eb: [high/OBSERVED/OPEN] whitespace inconsistency in measured scope; review source evidence. Evidence: evidence:9053252796c047b3a919ea72.
+- finding:439905cc3e3b800959366b89: [high/OBSERVED/OPEN] casing inconsistency in measured scope; review source evidence. Evidence: evidence:c10382eed0087052de6d28a7.
+- finding:7940d984f4ccec0120df2c72: [high/OBSERVED/OPEN] whitespace inconsistency in measured scope; review source evidence. Evidence: evidence:0762a99e348ef5663fdf9d2b.
+- finding:90f4c807b44497e68e9b7359: [high/OBSERVED/OPEN] casing inconsistency in measured scope; review source evidence. Evidence: evidence:0762a99e348ef5663fdf9d2b.
+- finding:a1cd355b99256fa77f0074cc: [high/INFERRED/OPEN] invalid or ambiguous dates in measured scope; review source evidence. Evidence: evidence:beabe145cfc8fcb7b6939ddd.
+- finding:78209f737241b4f63d907144: [high/OBSERVED/OPEN] mixed physical types in measured scope; review source evidence. Evidence: evidence:beabe145cfc8fcb7b6939ddd.
+- finding:8eb0556b69812d0729b34ca0: [high/UNRESOLVED/OPEN] code definitions cannot be established from supplied evidence Evidence: evidence:0762a99e348ef5663fdf9d2b.
+- finding:78b6a75cc0ef561e07c1ccc7: [high/UNRESOLVED/OPEN] temporal semantics cannot be established from supplied evidence Evidence: evidence:beabe145cfc8fcb7b6939ddd.
+- finding:5725d06e94f7d0d3ef6b3d56: [high/UNRESOLVED/OPEN] governance owner cannot be established from supplied evidence Evidence: evidence:f79dcb311b2369bf3e158905.
+- finding:b799423fd9b083b7e3809a51: [high/UNRESOLVED/OPEN] governance authoritative source cannot be established from supplied evidence Evidence: evidence:87d967c7d25a64ac28cc804b.
+- finding:33f4f57b73a91ff220d3f950: [high/UNRESOLVED/OPEN] governance security classification cannot be established from supplied evidence Evidence: evidence:e5fd2dcd1bd4654f636515fd.
 
 ## Unresolved Questions
 
@@ -209,36 +209,36 @@ Findings distinguish OBSERVED measurements, INFERRED interpretations, and UNRESO
 
 ### Customers
 
-- 36.7 [high] Review variants against original values; approve a canonical mapping and enforce it during ingestion. Finding: finding:439905cc3e3b800959366b89; evidence: evidence:5251f836c1f901de2055c575.
-- 36.7 [high] Review variants against original values; approve a canonical mapping and enforce it during ingestion. Finding: finding:90f4c807b44497e68e9b7359; evidence: evidence:efd675a6196ddd2a8d50c782.
-- 35.0 [high] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:5725d06e94f7d0d3ef6b3d56; evidence: evidence:bc0d37eb228904982415210a.
-- 35.0 [high] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:b799423fd9b083b7e3809a51; evidence: evidence:7026d2189af6b19c5e3cf7cf.
-- 35.0 [high] Answer the linked SME question with an authoritative definition and source reference; incorporate the resolution in the proposed contract. Finding: finding:8eb0556b69812d0729b34ca0; evidence: evidence:efd675a6196ddd2a8d50c782.
-- 35.0 [high] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:33f4f57b73a91ff220d3f950; evidence: evidence:9dfd604551b9fc51cd3981a6.
-- 35.0 [high] Review variants against original values; approve a canonical mapping and enforce it during ingestion. Finding: finding:78209f737241b4f63d907144; evidence: evidence:650afac3e7f09c78af73b89d.
-- 35.0 [high] Answer the linked SME question with an authoritative definition and source reference; incorporate the resolution in the proposed contract. Finding: finding:78b6a75cc0ef561e07c1ccc7; evidence: evidence:650afac3e7f09c78af73b89d.
-- 35.0 [high] Review failing records against the explicit rule or field definition; correct from an authoritative source and rerun validation. Finding: finding:a1cd355b99256fa77f0074cc; evidence: evidence:650afac3e7f09c78af73b89d.
-- 31.7 [high] Review variants against original values; approve a canonical mapping and enforce it during ingestion. Finding: finding:b87bc9df10bf12ab65b106a8; evidence: evidence:4cef4b91ea4a05b2e1afb18a.
-- 31.7 [high] Define a canonical representation with the owner and validate formatting at ingestion; preserve original values in lineage. Finding: finding:7940d984f4ccec0120df2c72; evidence: evidence:efd675a6196ddd2a8d50c782.
-- 31.7 [high] Confirm entity granularity and key authority; quarantine duplicates for owner review before deduplicating. Finding: finding:fd499fd5fc242e90f09d1379; evidence: evidence:490393998160a489a29185bf.
-- 31.7 [high] Confirm requiredness and obtain missing values from the authoritative source; add a not-null rule only after approval. Finding: finding:850bce205d0d29a326d3c637; evidence: evidence:4cef4b91ea4a05b2e1afb18a.
-- 31.7 [high] Confirm entity granularity and key authority; quarantine duplicates for owner review before deduplicating. Finding: finding:519536cac6d39dbbd493afb3; evidence: evidence:4cef4b91ea4a05b2e1afb18a.
-- 31.7 [high] Define a canonical representation with the owner and validate formatting at ingestion; preserve original values in lineage. Finding: finding:59bf15dddabcf27efb2af5eb; evidence: evidence:a6e218fc3935394674fe4c11.
-- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:5914f4c8a75711a7e07c63d6; evidence: evidence:063c18b17a44e4169d2d01ac.
-- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:bb7552d82ecae73dc26593e6; evidence: evidence:2198f3250d85342dba0d016e.
-- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:311d35157b5827799fa5969e; evidence: evidence:aad7f6035568b437b42496c6.
-- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:f664d4872f6912c580b6fb93; evidence: evidence:bd40c5b1523aaafe42ccc7db.
-- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:6409bba33b5a78b8e1e62bb2; evidence: evidence:f2ad6bae188e205284ce853c.
-- 25.0 [medium] Answer the linked SME question with an authoritative definition and source reference; incorporate the resolution in the proposed contract. Finding: finding:3c257ad6732cd27bd31b9c4a; evidence: evidence:650afac3e7f09c78af73b89d.
-- 25.0 [medium] Answer the linked SME question with an authoritative definition and source reference; incorporate the resolution in the proposed contract. Finding: finding:abff3db953aa7b1e57bc7ec7; evidence: evidence:5251f836c1f901de2055c575.
-- 25.0 [medium] Answer the linked SME question with an authoritative definition and source reference; incorporate the resolution in the proposed contract. Finding: finding:180da86ca1343f544cf291af; evidence: evidence:4cef4b91ea4a05b2e1afb18a.
-- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:26b3823513a0631cdb40249d; evidence: evidence:b036483e08687215ad245e52.
-- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:cf3d51356b5de19270acc538; evidence: evidence:f21b27ce23c3c68dd7990a81.
-- 25.0 [medium] Answer the linked SME question with an authoritative definition and source reference; incorporate the resolution in the proposed contract. Finding: finding:07594156edb8d62cbe5584a8; evidence: evidence:a6e218fc3935394674fe4c11.
-- 25.0 [medium] Answer the linked SME question with an authoritative definition and source reference; incorporate the resolution in the proposed contract. Finding: finding:f2ec804cb8ed539a938fae73; evidence: evidence:efd675a6196ddd2a8d50c782.
-- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:21c595d58a73b395579264e3; evidence: evidence:4e2350091176e0d7b15851f2.
-- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:0a0616e6d1065e4e664a575c; evidence: evidence:bad804492f05241a15f0bf72.
-- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:3a4036c116ca12e2ef739ab1; evidence: evidence:a16201e58695fb75267c29ee.
-- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:efd040cb6ee61c0492bd8b0a; evidence: evidence:1e916eeebc0ff8f212f9fd03.
-- 11.7 [low] Review potential anomalies with a domain expert; do not delete statistical extremes solely because they are outliers. Finding: finding:2fca1102e35fc4169c5c0953; evidence: evidence:a6e218fc3935394674fe4c11.
-- 11.7 [low] Review potential anomalies with a domain expert; do not delete statistical extremes solely because they are outliers. Finding: finding:da77c09405ce0b6a1529e4e5; evidence: evidence:efd675a6196ddd2a8d50c782.
+- 36.7 [high] Review variants against original values; approve a canonical mapping and enforce it during ingestion. Finding: finding:439905cc3e3b800959366b89; evidence: evidence:c10382eed0087052de6d28a7.
+- 36.7 [high] Review variants against original values; approve a canonical mapping and enforce it during ingestion. Finding: finding:90f4c807b44497e68e9b7359; evidence: evidence:0762a99e348ef5663fdf9d2b.
+- 35.0 [high] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:5725d06e94f7d0d3ef6b3d56; evidence: evidence:f79dcb311b2369bf3e158905.
+- 35.0 [high] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:b799423fd9b083b7e3809a51; evidence: evidence:87d967c7d25a64ac28cc804b.
+- 35.0 [high] Answer the linked SME question with an authoritative definition and source reference; incorporate the resolution in the proposed contract. Finding: finding:8eb0556b69812d0729b34ca0; evidence: evidence:0762a99e348ef5663fdf9d2b.
+- 35.0 [high] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:33f4f57b73a91ff220d3f950; evidence: evidence:e5fd2dcd1bd4654f636515fd.
+- 35.0 [high] Review variants against original values; approve a canonical mapping and enforce it during ingestion. Finding: finding:78209f737241b4f63d907144; evidence: evidence:beabe145cfc8fcb7b6939ddd.
+- 35.0 [high] Answer the linked SME question with an authoritative definition and source reference; incorporate the resolution in the proposed contract. Finding: finding:78b6a75cc0ef561e07c1ccc7; evidence: evidence:beabe145cfc8fcb7b6939ddd.
+- 35.0 [high] Review failing records against the explicit rule or field definition; correct from an authoritative source and rerun validation. Finding: finding:a1cd355b99256fa77f0074cc; evidence: evidence:beabe145cfc8fcb7b6939ddd.
+- 31.7 [high] Review variants against original values; approve a canonical mapping and enforce it during ingestion. Finding: finding:b87bc9df10bf12ab65b106a8; evidence: evidence:3dbfb6238b57b1c535fcf2e3.
+- 31.7 [high] Define a canonical representation with the owner and validate formatting at ingestion; preserve original values in lineage. Finding: finding:7940d984f4ccec0120df2c72; evidence: evidence:0762a99e348ef5663fdf9d2b.
+- 31.7 [high] Confirm entity granularity and key authority; quarantine duplicates for owner review before deduplicating. Finding: finding:fd499fd5fc242e90f09d1379; evidence: evidence:f2cdcda37101ead4d3c0e69c.
+- 31.7 [high] Confirm requiredness and obtain missing values from the authoritative source; add a not-null rule only after approval. Finding: finding:850bce205d0d29a326d3c637; evidence: evidence:3dbfb6238b57b1c535fcf2e3.
+- 31.7 [high] Confirm entity granularity and key authority; quarantine duplicates for owner review before deduplicating. Finding: finding:519536cac6d39dbbd493afb3; evidence: evidence:3dbfb6238b57b1c535fcf2e3.
+- 31.7 [high] Define a canonical representation with the owner and validate formatting at ingestion; preserve original values in lineage. Finding: finding:59bf15dddabcf27efb2af5eb; evidence: evidence:9053252796c047b3a919ea72.
+- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:5914f4c8a75711a7e07c63d6; evidence: evidence:0c51d44daff02618bd5aab3f.
+- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:bb7552d82ecae73dc26593e6; evidence: evidence:0619fc186b616aa5aae0cdaa.
+- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:311d35157b5827799fa5969e; evidence: evidence:80dbc52b4ea54283fc53bf7a.
+- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:f664d4872f6912c580b6fb93; evidence: evidence:756d0fefb1cced68e118b8a1.
+- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:6409bba33b5a78b8e1e62bb2; evidence: evidence:2da75764975ff8623f11b74d.
+- 25.0 [medium] Answer the linked SME question with an authoritative definition and source reference; incorporate the resolution in the proposed contract. Finding: finding:3c257ad6732cd27bd31b9c4a; evidence: evidence:beabe145cfc8fcb7b6939ddd.
+- 25.0 [medium] Answer the linked SME question with an authoritative definition and source reference; incorporate the resolution in the proposed contract. Finding: finding:abff3db953aa7b1e57bc7ec7; evidence: evidence:c10382eed0087052de6d28a7.
+- 25.0 [medium] Answer the linked SME question with an authoritative definition and source reference; incorporate the resolution in the proposed contract. Finding: finding:180da86ca1343f544cf291af; evidence: evidence:3dbfb6238b57b1c535fcf2e3.
+- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:26b3823513a0631cdb40249d; evidence: evidence:da8878588e842bfd00d87547.
+- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:cf3d51356b5de19270acc538; evidence: evidence:0c50fda449a7ca0912ce4910.
+- 25.0 [medium] Answer the linked SME question with an authoritative definition and source reference; incorporate the resolution in the proposed contract. Finding: finding:07594156edb8d62cbe5584a8; evidence: evidence:9053252796c047b3a919ea72.
+- 25.0 [medium] Answer the linked SME question with an authoritative definition and source reference; incorporate the resolution in the proposed contract. Finding: finding:f2ec804cb8ed539a938fae73; evidence: evidence:0762a99e348ef5663fdf9d2b.
+- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:21c595d58a73b395579264e3; evidence: evidence:f8af6e9792d27b7198f8cd0a.
+- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:0a0616e6d1065e4e664a575c; evidence: evidence:6da56839e1b9e566ac970f88.
+- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:3a4036c116ca12e2ef739ab1; evidence: evidence:34b33d80813283a52a6803a2.
+- 25.0 [medium] Obtain the missing governance decision from the accountable owner and record authority, source reference and review date. Finding: finding:efd040cb6ee61c0492bd8b0a; evidence: evidence:e75f22880dca5bff3eff0b0f.
+- 11.7 [low] Review potential anomalies with a domain expert; do not delete statistical extremes solely because they are outliers. Finding: finding:2fca1102e35fc4169c5c0953; evidence: evidence:9053252796c047b3a919ea72.
+- 11.7 [low] Review potential anomalies with a domain expert; do not delete statistical extremes solely because they are outliers. Finding: finding:da77c09405ce0b6a1529e4e5; evidence: evidence:0762a99e348ef5663fdf9d2b.
