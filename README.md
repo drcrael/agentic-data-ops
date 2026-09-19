@@ -13,8 +13,8 @@ This is a functioning MVP, not an enterprise certification system. Measurements,
 ## Install
 
 Python **3.11 or newer** is required. Linux CI covers Python 3.11–3.14. The published
-v0.1.2 wheel and source package also pass native Windows Server 2022 and macOS 14
-audits with Python 3.11 and 3.14.
+release packages are checked on native Windows Server 2022 and macOS 14
+with Python 3.11 and 3.14; see [validation](VALIDATION.md).
 
 ```bash
 git clone https://github.com/drcrael/agentic-data-ops.git

@@ -1,6 +1,6 @@
 # Executed validation
 
-Validation date: 2026-09-19. Environment: Linux, CPython 3.14.7. These are observed execution results, not expected targets.
+Release: v0.1.3. Validation date: 2026-09-19. Environment: Linux, CPython 3.14.7. These are observed execution results, not expected targets.
 
 ## Installation and static gates
 
@@ -55,8 +55,8 @@ Generated, sanitized report artifacts from the dirty fixture are retained in `ex
 - Source: 100,000 CSV rows.
 - Retained/assessed: 10,000 rows.
 - Scope: explicitly `sample`.
-- Elapsed assessment time: **0.314 seconds**.
-- Peak process RSS: **103.25 MiB**.
+- Elapsed assessment time: **0.336 seconds**.
+- Peak process RSS: **103.0 MiB**.
 
 The raw measurement is in `docs/benchmark.json`. Hardware and dependency versions affect performance; these measurements are not a production SLA.
 
@@ -83,3 +83,12 @@ replacing the published release assets. CI uses pinned Action commits and Python
 platforms. Enterprise identity, remote catalogs, persistent shared caches and
 external schema-registry enforcement remain outside this MVP; see LIMITATIONS.md
 and DELIVERY_CHECKLIST.md.
+
+## v0.1.3 packaging update
+
+v0.1.3 packages the portable performance test, repeatable release-runtime audit
+workflow, and updated installation/manual guidance. Application behavior is unchanged
+from v0.1.2; only version/provenance identifiers change. The v0.1.2 live-model
+audit above is retained as prior integration evidence, not represented as a new
+v0.1.3 model run. Version-specific artifact and platform results are recorded in
+the v0.1.3 release verification asset.

@@ -180,7 +180,7 @@ def footer(c, doc):
         c.setFont("SansBold", 7.5)
         c.setFillColor(MUTED)
         c.drawString(48, 762, "AGENTIC DATA OPS  /  USER MANUAL")
-        c.drawRightString(564, 762, "MVP 0.1.2")
+        c.drawRightString(564, 762, "MVP 0.1.3")
         c.line(48, 39, 564, 39)
         c.setFont("Sans", 7.4)
         c.drawString(48, 25, "Installation, assessment and continuous improvement")
@@ -214,7 +214,7 @@ def footer(c, doc):
             c.drawString(56, 510 - i * 21, line)
         c.setFillColor(colors.HexColor("#92DAD7"))
         c.setFont("SansBold", 9)
-        c.drawString(56, 397, "DATA MATURITY AGENT 0.1.2")
+        c.drawString(56, 397, "DATA MATURITY AGENT 0.1.3")
         c.setFillColor(colors.white)
         c.setFont("Sans", 10)
         c.drawString(56, 371, "Comprehensive installation and usage reference")
@@ -287,7 +287,7 @@ doc = Manual(
     bottomMargin=54,
     title="Agentic Data Ops - User Manual",
     author="Agentic Data Ops",
-    subject="Installation and operating manual for Data Maturity Agent 0.1.2",
+    subject="Installation and operating manual for Data Maturity Agent 0.1.3",
     invariant=1,
 )
 doc.build(story, onFirstPage=footer, onLaterPages=footer)

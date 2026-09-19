@@ -19,6 +19,6 @@ artifact = next(root.glob(pattern))
 subprocess.run([sys.executable, "-m", "pip", "install", f"{artifact}[dev]"], check=True)
 import data_maturity  # noqa: E402
 
-assert data_maturity.__version__ == "0.1.2"
+assert data_maturity.__version__ == os.environ.get("AUDIT_RELEASE_TAG", "v0.1.3").removeprefix("v")
 assert "site-packages" in str(data_maturity.__file__)
 print(f"Installed {artifact.name}: {data_maturity.__file__}")

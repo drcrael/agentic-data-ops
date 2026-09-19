@@ -10,6 +10,7 @@ from pathlib import Path
 
 import yaml
 
+from data_maturity import __version__
 from data_maturity.evidence.validation import validate_assessment
 from data_maturity.models.control import AssessmentRun
 
@@ -35,7 +36,7 @@ def bundle(path):
         assert hashlib.sha256((path / name).read_bytes()).hexdigest() == digest, (name, path)
     history = AssessmentRun.model_validate_json((path / "assessment_history.json").read_text())
     validate_assessment(history.assessment, {r.resolution_id for r in history.resolutions})
-    assert history.assessment.application_version == "0.1.2"
+    assert history.assessment.application_version == __version__
     if os.name != "nt":
         assert (path.stat().st_mode & 0o077) == 0
     return history

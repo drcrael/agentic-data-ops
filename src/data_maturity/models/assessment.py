@@ -225,7 +225,7 @@ class DatasetAssessment(Model):
 
 class WorkbookAssessment(Model):
     assessment_id: str
-    application_version: str = "0.1.2"
+    application_version: str = "0.1.3"
     source: SourceMetadata
     created_at: datetime = Field(default_factory=now)
     datasets: list[DatasetAssessment]
