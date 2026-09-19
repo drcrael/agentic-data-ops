@@ -70,7 +70,7 @@ jobs:
           cd "$RUNNER_TEMP/ollama"
           curl -fL --retry 3 -O https://github.com/ollama/ollama/releases/download/v0.34.2/ollama-linux-amd64.tar.zst
           curl -fL --retry 3 -O https://github.com/ollama/ollama/releases/download/v0.34.2/sha256sum.txt
-          grep ' ollama-linux-amd64.tar.zst$' sha256sum.txt | sha256sum -c -
+          grep ' ./ollama-linux-amd64.tar.zst$' sha256sum.txt | sha256sum -c -
           tar --zstd -xf ollama-linux-amd64.tar.zst
           echo "$RUNNER_TEMP/ollama/bin" >> "$GITHUB_PATH"
       - name: Start local model service
